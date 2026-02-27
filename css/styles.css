@@ -126,10 +126,9 @@ button { font-family: inherit; }
 .header__logo:hover { opacity: 0.85; }
 
 .header__logo-img {
-  height: 80px;
+  height: 40px;
   width: auto;
   object-fit: contain;
-  margin-top: 10px;
 }
 
 /* Fallback logo (SVG) cuando la imagen no carga */
@@ -415,6 +414,10 @@ button { font-family: inherit; }
    ============================================================ */
 .section {
   padding: 6rem 1.5rem;
+}
+
+.secction-page {
+    padding: 0rem 1.5rem !important;
 }
 
 .section__inner {
@@ -803,18 +806,96 @@ button { font-family: inherit; }
 }
 
 /* ============================================================
-   PÁGINAS INTERNAS (quienes-somos, terminos, etc.)
+   PÁGINAS INTERNAS (about, terms, etc.)
    ============================================================ */
+
+/* <main> wrapper */
 .page-main {
   min-height: 100vh;
-  padding-top: calc(var(--header-height) + 4rem);
-  padding-bottom: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: calc(var(--header-height) + 3rem);
+  padding-bottom: 5rem;
   background: var(--bg-body);
 }
 
+/* Tarjeta de contenido centrada */
+.page-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Encabezado de página */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Cuerpo de texto */
+.page-body {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Títulos de sección dentro del cuerpo */
+.page-body h2 {
+  color: var(--color-primary-dark);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Títulos de sub-sección (términos) */
+.page-body h2.page-h2--sm {
+  font-size: 1.3rem;
+}
+
+.page-body p {
+  margin-bottom: 2rem;
+}
+
+.page-body p.page-p--lead {
+  margin-bottom: 1rem;
+}
+
+/* Lista de misión */
+.page-body ul.page-list {
+  margin-left: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Grid de tarjetas de cultura */
+.page-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-card-item {
+  padding: 1.5rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Fecha de actualización */
+.page-date {
+  margin-bottom: 2rem;
+}
+
+/* Pie de página interna: botón centrado */
+.page-footer {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+/* Títulos legacy (compatibilidad) */
 .page-inner {
   max-width: 680px;
   width: 100%;
@@ -837,6 +918,13 @@ button { font-family: inherit; }
 .page-placeholder {
   font-size: 1.05rem;
   color: var(--text-muted);
+}
+
+/* Responsive: padding reducido en mobile */
+@media (max-width: 640px) {
+  .page-main  { padding-top: calc(var(--header-height) + 1.5rem); padding-bottom: 3rem; }
+  .page-card  { padding: 1.75rem 1.25rem; }
+  .page-body h2 { font-size: 1.3rem; }
 }
 
 /* ============================================================

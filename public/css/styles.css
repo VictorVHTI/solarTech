@@ -1340,6 +1340,86 @@ button { font-family: inherit; }
 }
 
 /* ============================================================
+   INGENIERÍAS INICIALES — sección intro
+   ============================================================ */
+
+/* Hero variante verde para II */
+.ii-hero .np-hero__overlay {
+  background-image:
+    radial-gradient(circle at 20% 60%, rgba(161,194,79,0.14) 0%, transparent 50%),
+    radial-gradient(circle at 80% 25%, rgba(5,111,165,0.12) 0%, transparent 50%);
+}
+
+.ii-intro {
+  background: var(--bg-white);
+}
+
+.ii-intro__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ii-intro__desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+/* Grid visual decorativo */
+.ii-visual__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.ii-visual__block {
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-white);
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.ii-visual__block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.ii-visual__block--blue   { background: linear-gradient(135deg, var(--blue-dark), var(--blue-light)); }
+.ii-visual__block--green  { background: linear-gradient(135deg, var(--green-dark), var(--green-light)); }
+.ii-visual__block--yellow { background: linear-gradient(135deg, #b07f00, var(--yellow)); color: var(--bg-dark); }
+
+/* Ítem full-width en el grid de alcance */
+.np-alcance__item--full {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(5,111,165,0.06), rgba(5,111,165,0.02));
+  border-color: rgba(5,111,165,0.2);
+}
+
+.ii-services .np-alcance__grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .ii-intro__inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .ii-visual__grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .ii-visual__block { padding: 1.25rem 1rem; font-size: 0.82rem; }
+  .np-alcance__item--full { grid-column: auto; }
+}
+
+/* ============================================================
    CARRUSEL (mantenimientos-correctivos y reutilizable)
    ============================================================ */
 

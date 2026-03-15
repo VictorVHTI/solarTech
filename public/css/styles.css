@@ -1340,6 +1340,170 @@ button { font-family: inherit; }
 }
 
 /* ============================================================
+   CARRUSEL (mantenimientos-correctivos y reutilizable)
+   ============================================================ */
+
+/* Hero variante naranja/amarilla para MC */
+.mc-hero .np-hero__overlay {
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(255,182,0,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(249,145,43,0.10) 0%, transparent 50%);
+}
+
+/* Sección galería */
+.mc-gallery-section {
+  background: var(--bg-dark);
+  padding-bottom: 0;
+}
+
+.mc-gallery-section .section__inner { margin-bottom: 2.5rem; }
+.mc-gallery-section .section__tag   { color: var(--yellow); background: rgba(255,182,0,0.12); }
+.mc-gallery-section .section__title { color: var(--text-white); }
+.mc-gallery-section .section__subtitle { color: rgba(255,255,255,0.6); }
+
+/* Carrusel principal */
+.mc-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 7;
+  max-height: 560px;
+}
+
+.mc-carousel__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mc-carousel__slide {
+  flex: 0 0 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mc-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.mc-carousel__slide img:hover { transform: scale(1.03); }
+
+/* Botones prev/next */
+.mc-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.mc-carousel__btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.mc-carousel__btn--prev { left: 1.25rem; }
+.mc-carousel__btn--next { right: 1.25rem; }
+
+/* Dots */
+.mc-carousel__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.45rem;
+  z-index: 10;
+}
+
+.mc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition), transform var(--transition), width var(--transition);
+}
+
+.mc-dot.active {
+  background: var(--yellow);
+  width: 24px;
+  border-radius: 4px;
+  transform: none;
+}
+
+/* Thumbnails */
+.mc-thumbs {
+  background: var(--bg-dark-2);
+  padding: 1rem 1.5rem 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.15) transparent;
+}
+
+.mc-thumbs::-webkit-scrollbar { height: 4px; }
+.mc-thumbs::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+.mc-thumbs__track {
+  display: flex;
+  gap: 0.6rem;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.mc-thumb {
+  width: 88px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2.5px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: border-color var(--transition), transform var(--transition), opacity var(--transition);
+  opacity: 0.55;
+}
+
+.mc-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.mc-thumb:hover  { opacity: 0.85; transform: translateY(-2px); }
+.mc-thumb.active { border-color: var(--yellow); opacity: 1; transform: translateY(-2px); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .mc-carousel      { aspect-ratio: 4 / 3; max-height: 320px; }
+  .mc-carousel__btn { width: 38px; height: 38px; }
+  .mc-thumb         { width: 64px; height: 44px; }
+}
+
+/* ============================================================
    ANIMACIONES
    ============================================================ */
 @keyframes fadeInUp {

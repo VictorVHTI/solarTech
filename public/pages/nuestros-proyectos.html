@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestros Proyectos — Solar Tech</title>
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=made-tommy@400,500,700,800&display=swap" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+  </head>
+  <body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <a href="../index.html" class="header__logo">
+          <img src="../assets/img/logo_st.png" alt="Solar Tech Logo" class="header__logo-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <span class="header__logo-fallback">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="header__logo-name">SolarTech</span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Navegación principal">
+          <a href="../index.html#inicio"    class="nav__link">Inicio</a>
+          <a href="../index.html#productos" class="nav__link">Productos</a>
+          <a href="../index.html#ubicacion" class="nav__link">Ubicación</a>
+          <a href="../index.html#contacto"  class="nav__link nav__link--cta">Contacto</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="np-hero">
+      <div class="np-hero__overlay" aria-hidden="true"></div>
+      <div class="np-hero__content">
+        <span class="section__tag">Metodología EPC</span>
+        <h1 class="np-hero__title">Nuestros Proyectos</h1>
+        <p class="np-hero__desc">Ingeniería integral llave en mano: diseño, procura, construcción, pruebas y puesta en marcha de centrales solares fotovoltaicas con los más altos estándares de calidad.</p>
+      </div>
+    </section>
+
+    <!-- ===================== ALCANCE ===================== -->
+    <section class="section np-alcance">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Alcance de servicio</span>
+          <h2 class="section__title">Ingeniería Integral EPC</h2>
+          <p class="section__subtitle">Cubrimos cada etapa del proyecto con tecnología certificada y equipos de última generación.</p>
+        </div>
+
+        <div class="np-alcance__grid">
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="14" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="3" x2="9" y2="9"/><line x1="15" y1="3" x2="15" y2="9"/>
+                <line x1="3" y1="13" x2="21" y2="13"/><line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Módulos Fotovoltaicos</h3>
+              <p class="np-alcance__desc">Suministro e instalación de módulos de última generación con estándares Tier 1, IEC 61215 y UL 61730.</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/>
+                <line x1="12" y1="12" x2="12" y2="16"/><circle cx="12" cy="12" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Inversores Certificados</h3>
+              <p class="np-alcance__desc">Suministro e instalación de inversores con certificaciones UL 1741 / UL 1699B para máxima eficiencia y seguridad.</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--yellow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Estructura de Montaje</h3>
+              <p class="np-alcance__desc">Diseño e instalación de estructura conforme al tipo de cubierta y condiciones del sitio, con criterios de seguridad y desempeño.</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"/>
+                <line x1="12" y1="17" x2="12" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Carport Fotovoltaico</h3>
+              <p class="np-alcance__desc">Diseño y construcción de carport fotovoltaico de acuerdo con los requerimientos técnicos y operativos del cliente.</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.82 19a19.5 19.5 0 0 1-5-3.22 2 2 0 0 1-.45-2.11l.97-.97"/>
+                <path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 5a10.94 10.94 0 0 0-1.96 6.13C3.04 16.21 7 20 12 20"/>
+                <path d="M10.71 5.05A16 16 0 0 1 22.54 9"/><path d="M1.42 9a15.91 15.91 0 0 0 2.39 10.29"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Gestión con CFE</h3>
+              <p class="np-alcance__desc">Gestión de interconexión con CFE, incluyendo trámites y adquisición/instalación del medidor bidireccional (según alcance contractual).</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--yellow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                <line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Dictámenes y Normatividad</h3>
+              <p class="np-alcance__desc">Gestión de dictámenes y cumplimiento normativo, incluyendo trámites de UVIE y UIIE (según aplique).</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+                <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Pruebas y Commissioning</h3>
+              <p class="np-alcance__desc">Mediciones eléctricas, pruebas de aislamiento/resistencia, verificación de protecciones y termografía para el aseguramiento de calidad.</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 6l5.5 5.5L9 9l6 6 3-3 5 5"/><path d="M22 14v7H2V3"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Monitoreo en Tiempo Real</h3>
+              <p class="np-alcance__desc">Sistema de monitoreo 24/7 para supervisión de generación y desempeño de la central solar.</p>
+            </div>
+          </div>
+
+          <div class="np-alcance__item reveal">
+            <div class="np-alcance__icon np-alcance__icon--yellow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="np-alcance__title">Garantías de Fabricantes</h3>
+              <p class="np-alcance__desc">Respaldo técnico de proveedores y marcas certificadas, con garantías completas de fabricantes para todos los componentes.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LÍNEA DE TIEMPO ===================== -->
+    <section class="section np-timeline-section">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Proceso de Ejecución</span>
+          <h2 class="section__title">De la idea a la energía</h2>
+          <p class="section__subtitle">Cinco etapas que garantizan una instalación exitosa, eficiente y bajo normatividad.</p>
+        </div>
+
+        <div class="np-timeline">
+
+          <div class="np-timeline__item reveal">
+            <div class="np-timeline__step">
+              <div class="np-timeline__bubble np-timeline__bubble--green">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="np-timeline__line" aria-hidden="true"></div>
+            </div>
+            <div class="np-timeline__body">
+              <span class="np-timeline__num">01</span>
+              <h3 class="np-timeline__title">Visita Técnica</h3>
+              <p class="np-timeline__desc">Levantamiento de información en sitio y evaluación técnico-económica del proyecto: viabilidad, ahorro estimado y retorno de inversión.</p>
+            </div>
+          </div>
+
+          <div class="np-timeline__item reveal">
+            <div class="np-timeline__step">
+              <div class="np-timeline__bubble np-timeline__bubble--blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true">
+                  <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+                  <rect x="8" y="9" width="8" height="6" rx="1"/>
+                </svg>
+              </div>
+              <div class="np-timeline__line" aria-hidden="true"></div>
+            </div>
+            <div class="np-timeline__body">
+              <span class="np-timeline__num">02</span>
+              <h3 class="np-timeline__title">Diseño FV</h3>
+              <p class="np-timeline__desc">Desarrollo de ingeniería y diseño del sistema: arreglo fotovoltaico, selección de inversores, diseño de estructura y criterios de seguridad.</p>
+            </div>
+          </div>
+
+          <div class="np-timeline__item reveal">
+            <div class="np-timeline__step">
+              <div class="np-timeline__bubble np-timeline__bubble--yellow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div class="np-timeline__line" aria-hidden="true"></div>
+            </div>
+            <div class="np-timeline__body">
+              <span class="np-timeline__num">03</span>
+              <h3 class="np-timeline__title">Procura y Construcción</h3>
+              <p class="np-timeline__desc">Procura de equipos certificados y ejecución de obra para la instalación y conexión completa de la central fotovoltaica.</p>
+            </div>
+          </div>
+
+          <div class="np-timeline__item reveal">
+            <div class="np-timeline__step">
+              <div class="np-timeline__bubble np-timeline__bubble--green">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                  <polyline points="9 15 11 17 15 13"/>
+                </svg>
+              </div>
+              <div class="np-timeline__line" aria-hidden="true"></div>
+            </div>
+            <div class="np-timeline__body">
+              <span class="np-timeline__num">04</span>
+              <h3 class="np-timeline__title">Trámites CFE</h3>
+              <p class="np-timeline__desc">Integración documental y trámites para interconexión con CFE, gestiones UVIE/UIIE y medidor bidireccional, según el alcance del proyecto.</p>
+            </div>
+          </div>
+
+          <div class="np-timeline__item np-timeline__item--last reveal">
+            <div class="np-timeline__step">
+              <div class="np-timeline__bubble np-timeline__bubble--blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" aria-hidden="true">
+                  <path d="M1 6l5.5 5.5L9 9l6 6 3-3 5 5"/>
+                  <path d="M22 14v7H2V3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="np-timeline__body">
+              <span class="np-timeline__num">05</span>
+              <h3 class="np-timeline__title">Operación y Mantenimiento</h3>
+              <p class="np-timeline__desc">Programa de mantenimiento y monitoreo de desempeño 24/7, con atención a incidencias conforme a póliza de servicio.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GARANTÍAS ===================== -->
+    <section class="section np-garantias">
+      <div class="section__inner">
+        <div class="np-garantias__inner">
+
+          <div class="np-garantias__intro reveal">
+            <span class="section__tag">Calidad y confianza</span>
+            <h2 class="section__title" style="text-align:left;">Calidad, Certificaciones y Garantías</h2>
+            <p class="np-garantias__desc">Brindamos respaldo técnico y aseguramos el cumplimiento normativo en cada proyecto, trabajando exclusivamente con marcas líderes y proveedores certificados, seleccionados bajo criterios de desempeño, confiabilidad y compatibilidad con la normatividad aplicable.</p>
+          </div>
+
+          <div class="np-garantias__grid">
+
+            <div class="np-garantia__card reveal">
+              <div class="np-garantia__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3 class="np-garantia__title">Obra y Construcción</h3>
+              <p class="np-garantia__value">Garantía de instalación</p>
+              <p class="np-garantia__note">Conforme a alcance contractual</p>
+            </div>
+
+            <div class="np-garantia__card reveal">
+              <div class="np-garantia__icon np-garantia__icon--green">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="14" rx="2"/>
+                  <line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="9"/>
+                  <line x1="15" y1="3" x2="15" y2="9"/><line x1="3" y1="13" x2="21" y2="13"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3 class="np-garantia__title">Módulos Fotovoltaicos</h3>
+              <p class="np-garantia__value">12 años (fabricante)</p>
+              <p class="np-garantia__value">25 años (producción)</p>
+              <p class="np-garantia__note">Garantía del fabricante</p>
+            </div>
+
+            <div class="np-garantia__card reveal">
+              <div class="np-garantia__icon np-garantia__icon--yellow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2"/>
+                  <path d="M16 7V5a2 2 0 0 0-4 0v2"/>
+                  <line x1="12" y1="12" x2="12" y2="16"/>
+                </svg>
+              </div>
+              <h3 class="np-garantia__title">Inversores</h3>
+              <p class="np-garantia__value">10 años</p>
+              <p class="np-garantia__note">Garantía del fabricante</p>
+            </div>
+
+            <div class="np-garantia__card reveal">
+              <div class="np-garantia__icon np-garantia__icon--blue">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <h3 class="np-garantia__title">Estructura</h3>
+              <p class="np-garantia__value">25 años</p>
+              <p class="np-garantia__note">Garantía del fabricante</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="np-cta">
+      <div class="np-cta__inner">
+        <h2 class="np-cta__title">¿Listo para iniciar tu proyecto?</h2>
+        <p class="np-cta__desc">Contáctanos y recibe una evaluación técnico-económica sin costo.</p>
+        <a href="../index.html#contacto" class="btn btn--primary">Solicitar cotización</a>
+      </div>
+    </section>
+
+    <!-- Footer volver -->
+    <div class="np-back">
+      <a href="../index.html" class="np-back__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Volver al inicio
+      </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

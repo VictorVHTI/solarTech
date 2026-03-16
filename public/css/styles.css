@@ -1879,11 +1879,11 @@ button { font-family: inherit; }
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.3s ease;
   }
 
   .nav.nav--open {
-    max-height: 320px;
+    max-height: 600px;
     opacity: 1;
     pointer-events: auto;
   }

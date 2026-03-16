@@ -11,35 +11,7 @@
   <body>
 
     <!-- ===================== HEADER ===================== -->
-    <header class="header" id="header">
-      <div class="header__inner">
-        <a href="../index.html" class="header__logo">
-          <img src="../assets/img/logo_st.png" alt="Solar Tech Logo" class="header__logo-img"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <span class="header__logo-fallback">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"/>
-              <line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="header__logo-name">SolarTech</span>
-        </a>
-        <nav class="nav" id="nav" aria-label="Navegación principal">
-          <a href="../index.html#inicio"    class="nav__link">Inicio</a>
-          <a href="../index.html#productos" class="nav__link">Productos</a>
-          <a href="../index.html#ubicacion" class="nav__link">Ubicación</a>
-          <a href="../index.html#contacto"  class="nav__link nav__link--cta">Contacto</a>
-        </nav>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
-          <span class="hamburger__bar"></span>
-          <span class="hamburger__bar"></span>
-          <span class="hamburger__bar"></span>
-        </button>
-      </div>
-    </header>
+    <site-header></site-header>
 
     <!-- ===================== HERO ===================== -->
     <section class="np-hero pr-hero">
@@ -379,6 +351,7 @@
       </a>
     </div>
 
+    <script src="../js/SiteHeader.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/ImageCarousel.js"></script>
   </body>

@@ -208,80 +208,90 @@
         <div class="section__header">
           <span class="section__tag">Plan de mantenimiento</span>
           <h2 class="section__title">Frecuencias de Mantenimiento</h2>
-          <p class="section__subtitle">Calendario de actividades preventivas incluidas en la Póliza O&amp;M Anual, organizadas por sistema y periodicidad.</p>
+          <p class="section__subtitle">Actividades preventivas incluidas en la Póliza O&amp;M Anual, agrupadas por sistema con frecuencia de <strong>2 visitas al año</strong>.</p>
         </div>
 
         <div class="sa-table-wrap">
           <table class="sa-freq-table">
             <thead>
               <tr>
+                <th>Sistema</th>
                 <th>Actividad</th>
-                <th>Mensual</th>
-                <th>Trimestral</th>
-                <th>Semestral</th>
-                <th>Anual</th>
+                <th>Frecuencia</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Limpieza de módulos fotovoltaicos</td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--green">✓</span></td>
-                <td></td><td></td><td></td>
+              <!-- PANELES SOLARES -->
+              <tr class="sa-freq-table__group">
+                <td rowspan="2"><strong>Paneles Solares</strong></td>
+                <td>Inspección visual</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--green">2× año</span></td>
               </tr>
               <tr>
-                <td>Inspección visual de módulos y estructura</td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--green">✓</span></td>
-                <td></td><td></td><td></td>
+                <td>Termografía</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--green">2× año</span></td>
+              </tr>
+              <!-- INVERSORES -->
+              <tr class="sa-freq-table__group">
+                <td rowspan="6"><strong>Inversores</strong></td>
+                <td>Inspección visual</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">2× año</span></td>
               </tr>
               <tr>
-                <td>Revisión de parámetros en monitoreo</td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--green">✓</span></td>
-                <td></td><td></td><td></td>
+                <td>Inspección sistema de fijación</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">2× año</span></td>
               </tr>
               <tr>
-                <td>Termografía de módulos y tableros</td>
-                <td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">✓</span></td>
-                <td></td><td></td>
+                <td>Inspección de alarmas</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">2× año</span></td>
               </tr>
               <tr>
-                <td>Revisión de conectores y cableado DC/AC</td>
-                <td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">✓</span></td>
-                <td></td><td></td>
+                <td>Mantenimiento del sistema de control</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">2× año</span></td>
               </tr>
               <tr>
-                <td>Ajuste de protecciones eléctricas</td>
-                <td></td><td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--yellow">✓</span></td>
-                <td></td>
+                <td>Medición de voltajes y corrientes en los MPPT</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">2× año</span></td>
               </tr>
               <tr>
-                <td>Pruebas de resistencia de aislamiento (IR)</td>
-                <td></td><td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--yellow">✓</span></td>
-                <td></td>
+                <td>Revisión del sistema de comunicación / Monitoreo</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--blue">2× año</span></td>
+              </tr>
+              <!-- ESTRUCTURA -->
+              <tr class="sa-freq-table__group">
+                <td rowspan="3"><strong>Estructura</strong></td>
+                <td>Inspección visual</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--yellow">2× año</span></td>
               </tr>
               <tr>
-                <td>Revisión de inversores y firmware</td>
-                <td></td><td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--yellow">✓</span></td>
-                <td></td>
+                <td>Ajuste de tornillos de fijación</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--yellow">2× año</span></td>
               </tr>
               <tr>
-                <td>Auditoría técnica integral del sistema</td>
-                <td></td><td></td><td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">✓</span></td>
+                <td>Inspección del sistema de fijación y toma de tierra</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--yellow">2× año</span></td>
+              </tr>
+              <!-- CABLEADO DC/AC -->
+              <tr class="sa-freq-table__group">
+                <td rowspan="5"><strong>Cableado DC/AC y Cuadro de Protecciones</strong></td>
+                <td>Inspección visual del tablero de protecciones</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">2× año</span></td>
               </tr>
               <tr>
-                <td>Reporte anual de desempeño y proyección</td>
-                <td></td><td></td><td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">✓</span></td>
+                <td>Inspección del estado de las protecciones DC</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">2× año</span></td>
               </tr>
               <tr>
-                <td>Verificación de sistema de tierra física</td>
-                <td></td><td></td><td></td>
-                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">✓</span></td>
+                <td>Inspección del estado de charolas y canalización</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">2× año</span></td>
+              </tr>
+              <tr>
+                <td>Revisión del cableado, curvaturas y estado del cable</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">2× año</span></td>
+              </tr>
+              <tr>
+                <td>Ajuste de bornes y contactos</td>
+                <td class="sa-freq-table__check"><span class="sa-check sa-check--orange">2× año</span></td>
               </tr>
             </tbody>
           </table>

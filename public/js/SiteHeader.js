@@ -32,7 +32,7 @@ class SiteHeader extends HTMLElement {
         <div class="header__inner">
 
           <!-- Logo -->
-          <a href="${home}#inicio" class="header__logo">
+          <a href="${home}#inicio" class="header__logo" title="ENERTIUM SOLARTECH SOLUTIONS S.A. DE C.V. — Marca registrada ante el IMPI">
             <img
               src="${root}assets/img/logo_st.png"
               alt="Solar Tech Logo"

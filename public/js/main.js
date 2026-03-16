@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
      1. ANIMACIONES REVEAL al hacer scroll (Intersection Observer)
      ============================================================ */
-  /* ============================================================
-     1. ANIMACIONES REVEAL al hacer scroll (Intersection Observer)
-     ============================================================ */
   // Añadir clase .reveal a los elementos que queremos animar
   const revealTargets = [
     '.card',
@@ -90,9 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
         + `?subject=${encodeURIComponent(subject)}`
         + `&body=${encodeURIComponent(body)}`;
 
-      // window.open es más fiable que location.href para mailto
-      // en todos los navegadores y entornos locales/producción
-      window.open(mailto, '_self');
+      // Crear un <a> temporal y disparar click — única forma 100% fiable
+      // para abrir el cliente de correo desde un submit en todos los navegadores
+      const a = document.createElement('a');
+      a.href = mailto;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     });
   }
 });

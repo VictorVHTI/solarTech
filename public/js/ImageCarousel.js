@@ -56,20 +56,24 @@ class ImageCarousel extends HTMLElement {
           --accent: #FFB600;
           --radius: 12px;
           --btn-size: 44px;
-          --carousel-max-h: 82vh;
+        }
+
+        /* ── Wrapper centrador ──
+           Limita el ancho al calculado por el alto máximo (82vh × 16/9)
+           y se centra horizontalmente dentro del host               */
+        .host-wrapper {
+          width: min(100%, calc(82vh * 16 / 9));
+          margin-inline: auto;
         }
 
         /* ── Wrapper ── */
         .carousel {
           position: relative;
           width: 100%;
-          max-height: var(--carousel-max-h);
           overflow: hidden;
           border-radius: var(--radius);
           background: #0d1117;
           aspect-ratio: 16 / 9;
-          /* En pantallas grandes el alto manda; el ancho se recorta al aspect-ratio */
-          container-type: size;
           /* Desacopla el gesto horizontal del scroll de página */
           touch-action: pan-y pinch-zoom;
         }
@@ -91,7 +95,7 @@ class ImageCarousel extends HTMLElement {
         .slide img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: cover;
           display: block;
           pointer-events: none;
           user-select: none;
@@ -184,35 +188,37 @@ class ImageCarousel extends HTMLElement {
 
         /* ── Responsive ── */
         @media (max-width: 600px) {
-          :host { --carousel-max-h: 60vw; }
+          .host-wrapper { width: 100%; }
           .btn { width: 36px; height: 36px; }
           .thumb { flex: 0 0 56px; height: 38px; }
         }
       </style>
 
-      <div class="carousel" part="carousel">
-        <div class="track" part="track">${slides}</div>
+      <div class="host-wrapper">
+        <div class="carousel" part="carousel">
+          <div class="track" part="track">${slides}</div>
 
-        <button class="btn btn--prev" aria-label="Imagen anterior" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2.5"
-               stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
-        </button>
+          <button class="btn btn--prev" aria-label="Imagen anterior" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
 
-        <button class="btn btn--next" aria-label="Imagen siguiente" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2.5"
-               stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
-        </button>
+          <button class="btn btn--next" aria-label="Imagen siguiente" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
 
-        <div class="dots" role="tablist" aria-label="Navegación de imágenes">${dots}</div>
+          <div class="dots" role="tablist" aria-label="Navegación de imágenes">${dots}</div>
+        </div>
+
+        <div class="thumbs" part="thumbs">${thumbs}</div>
       </div>
-
-      <div class="thumbs" part="thumbs">${thumbs}</div>
     `;
   }
 

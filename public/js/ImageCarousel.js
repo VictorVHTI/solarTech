@@ -56,16 +56,20 @@ class ImageCarousel extends HTMLElement {
           --accent: #FFB600;
           --radius: 12px;
           --btn-size: 44px;
+          --carousel-max-h: 82vh;
         }
 
         /* ── Wrapper ── */
         .carousel {
           position: relative;
           width: 100%;
+          max-height: var(--carousel-max-h);
           overflow: hidden;
           border-radius: var(--radius);
           background: #0d1117;
           aspect-ratio: 16 / 9;
+          /* En pantallas grandes el alto manda; el ancho se recorta al aspect-ratio */
+          container-type: size;
           /* Desacopla el gesto horizontal del scroll de página */
           touch-action: pan-y pinch-zoom;
         }
@@ -87,7 +91,7 @@ class ImageCarousel extends HTMLElement {
         .slide img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
           pointer-events: none;
           user-select: none;
@@ -180,6 +184,7 @@ class ImageCarousel extends HTMLElement {
 
         /* ── Responsive ── */
         @media (max-width: 600px) {
+          :host { --carousel-max-h: 60vw; }
           .btn { width: 36px; height: 36px; }
           .thumb { flex: 0 0 56px; height: 38px; }
         }

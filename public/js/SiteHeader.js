@@ -58,7 +58,6 @@ class SiteHeader extends HTMLElement {
           <!-- Nav desktop -->
           <nav class="nav" id="nav" aria-label="Navegación principal">
             <a href="${home}#inicio"    class="nav__link">Inicio</a>
-            <a href="${home}#productos" class="nav__link">Productos</a>
             <a href="${home}#ubicacion" class="nav__link">Ubicación</a>
 
             <!-- Dropdown Explora -->
@@ -74,6 +73,10 @@ class SiteHeader extends HTMLElement {
                 </svg>
               </button>
               <div class="nav__dropdown-menu" id="nav-dropdown-menu" role="menu">
+                <a href="${pages}productos.html" class="nav__dropdown-item" role="menuitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                  Productos y Servicios
+                </a>
                 <a href="${pages}nuestros-proyectos.html" class="nav__dropdown-item" role="menuitem">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                   Nuestros Proyectos

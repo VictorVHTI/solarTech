@@ -938,8 +938,33 @@ button { font-family: inherit; }
   flex-shrink: 0;
 }
 
+.explora__icon--green  { background: rgba(161,194,79,0.14); color: var(--green-dark); }
 .explora__icon--blue   { background: rgba(5,111,165,0.12);  color: var(--blue-light); }
 .explora__icon--yellow { background: rgba(255,182,0,0.14);  color: #b07f00; }
+
+/* Card destacada (Productos y Servicios) */
+.explora__card--featured {
+  border-color: var(--green-dark);
+  background: linear-gradient(135deg, rgba(161,194,79,0.06) 0%, var(--bg-white) 60%);
+  position: relative;
+  overflow: hidden;
+}
+.explora__card--featured::before {
+  content: '★ Destacado';
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.explora__card--featured:hover {
+  border-color: var(--green-dark);
+  box-shadow: 0 6px 24px rgba(60,119,53,0.18);
+}
 
 .explora__text {
   flex: 1;
@@ -968,6 +993,74 @@ button { font-family: inherit; }
 
 @media (max-width: 640px) {
   .explora__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PRODUCTOS PAGE — CTA
+   ============================================================ */
+.productos-page__cta {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-2) 100%);
+}
+
+.productos-page__cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.productos-page__cta-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.productos-page__cta-text .section__tag {
+  background: rgba(161,194,79,0.18);
+  color: var(--green-light);
+}
+
+.productos-page__cta-text .section__title {
+  color: var(--text-white);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-top: 0.5rem;
+}
+
+.productos-page__cta-desc {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-top: 0.75rem;
+}
+
+.productos-page__cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+  min-width: 220px;
+}
+
+.productos-page__cta-actions .btn--outline {
+  border-color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.85);
+  text-align: center;
+}
+.productos-page__cta-actions .btn--outline:hover {
+  border-color: var(--text-white);
+  color: var(--text-white);
+  background: rgba(255,255,255,0.06);
+}
+
+@media (max-width: 700px) {
+  .productos-page__cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .productos-page__cta-actions {
+    width: 100%;
+  }
 }
 
 /* ============================================================

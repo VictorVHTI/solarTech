@@ -12,7 +12,7 @@
   </head>
   <body>
 
-        <!-- ===================== HEADER ===================== -->
+    <!-- ===================== HEADER ===================== -->
     <site-header></site-header>
 
     <!-- ===================== HERO / INICIO ===================== -->
@@ -32,7 +32,7 @@
           una fuente accesible, confiable y respetuosa con el medio ambiente.
         </p>
         <div class="hero__actions">
-          <a href="#productos" class="btn btn--primary">Ver productos</a>
+          <a href="pages/productos.html" class="btn btn--primary">Ver productos</a>
           <a href="#contacto"  class="btn btn--outline">Contáctanos</a>
         </div>
       </div>
@@ -56,135 +56,171 @@
       </div>
     </section>
 
-    <!-- ===================== PRODUCTOS ===================== -->
-    <section class="section productos" id="productos">
+    <!-- ===================== EXPLORA ===================== -->
+    <section class="section explora" id="explora">
       <div class="section__inner">
         <div class="section__header">
-          <span class="section__tag">Lo que ofrecemos</span>
-          <h2 class="section__title">Nuestros Productos Y Servicios</h2>
+          <span class="section__tag">Explora más</span>
+          <h2 class="section__title">Todo lo que hacemos</h2>
           <p class="section__subtitle">
-            Soluciones fotovoltaicas para cada necesidad, con tecnología de vanguardia y respaldo garantizado.
+            Descubre en detalle cada uno de nuestros servicios especializados y el trabajo que nos respalda.
           </p>
         </div>
 
-        <div class="cards">
+        <div class="explora__grid">
 
-          <!-- Tarjeta 1: Ingeniería fotovoltaica -->
-          <article class="card">
-            <div class="card__icon card__icon--green" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="4" y="14" width="56" height="32" rx="3"/>
-                <line x1="4" y1="24" x2="60" y2="24"/>
-                <line x1="4" y1="34" x2="60" y2="34"/>
-                <line x1="19" y1="14" x2="19" y2="46"/>
-                <line x1="34" y1="14" x2="34" y2="46"/>
-                <line x1="49" y1="14" x2="49" y2="46"/>
-                <line x1="26" y1="46" x2="38" y2="46"/>
-                <line x1="32" y1="46" x2="32" y2="54"/>
-                <polyline points="10,8 32,2 54,8" stroke-width="2"/>
+          <!-- Card: Productos y Servicios (primero) -->
+          <a href="pages/productos.html" class="explora__card explora__card--featured">
+            <div class="explora__icon explora__icon--green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                <line x1="12" y1="12" x2="12" y2="16"/>
+                <line x1="10" y1="14" x2="14" y2="14"/>
               </svg>
             </div>
-            <h3 class="card__title">Ingeniería Fotovoltaica</h3>
-            <p class="card__desc">
-              Diseño y desarrollo de ingeniería para instalaciones fotovoltaicas de alto rendimiento.
-              Maximizamos la rentabilidad de los recursos para proyectos industriales.
-            </p>
-          </article>
+            <div class="explora__text">
+              <h3 class="explora__title">Productos y Servicios</h3>
+              <p class="explora__desc">Conoce todas nuestras soluciones fotovoltaicas: ingeniería, construcción, commissioning y más.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
 
-          <!-- Tarjeta 2: Project Management -->
-          <article class="card">
-            <div class="card__icon card__icon--blue" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="8" y="8" width="48" height="48" rx="4"/>
-                <line x1="8" y1="22" x2="56" y2="22"/>
-                <line x1="20" y1="8" x2="20" y2="22"/>
-                <line x1="44" y1="8" x2="44" y2="22"/>
-                <line x1="18" y1="34" x2="30" y2="34"/>
-                <line x1="18" y1="44" x2="36" y2="44"/>
-                <circle cx="44" cy="42" r="8"/>
-                <polyline points="40,42 43,45 49,39"/>
+          <a href="pages/nuestros-proyectos.html" class="explora__card">
+            <div class="explora__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
               </svg>
             </div>
-            <h3 class="card__title">Project Management</h3>
-            <p class="card__desc">
-              Coordinamos con nuestro equipo de ingeniería y operaciones, administrando el tiempo
-              y presupuesto de los proyectos fotovoltaicos.
-            </p>
-          </article>
+            <div class="explora__text">
+              <h3 class="explora__title">Nuestros Proyectos</h3>
+              <p class="explora__desc">Proceso paso a paso de cómo desarrollamos cada instalación fotovoltaica.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
 
-          <!-- Tarjeta 3: Procura y construcción -->
-          <article class="card">
-            <div class="card__icon card__icon--yellow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="32,4 58,18 58,46 32,60 6,46 6,18"/>
-                <line x1="32" y1="4" x2="32" y2="60"/>
-                <line x1="6" y1="18" x2="58" y2="18"/>
-                <line x1="6" y1="46" x2="58" y2="46"/>
-                <line x1="6" y1="32" x2="32" y2="32"/>
+          <a href="pages/proyectos-realizados.html" class="explora__card">
+            <div class="explora__icon explora__icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
               </svg>
             </div>
-            <h3 class="card__title">Procura y Construcción</h3>
-            <p class="card__desc">
-              Procura de equipos certificados y construcción de la central solar bajo las normas
-              mexicanas y aprobación previa de planos de ingeniería.
-            </p>
-          </article>
+            <div class="explora__text">
+              <h3 class="explora__title">Principales Proyectos Realizados</h3>
+              <p class="explora__desc">Portafolio de los proyectos más destacados ejecutados por Solar Tech.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
 
-          <!-- Tarjeta 4: Commissioning -->
-          <article class="card">
-            <div class="card__icon card__icon--green" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="32" cy="32" r="22"/>
-                <polyline points="22,32 29,39 44,24"/>
-                <line x1="32" y1="4" x2="32" y2="12"/>
-                <line x1="32" y1="52" x2="32" y2="60"/>
-                <line x1="4" y1="32" x2="12" y2="32"/>
-                <line x1="52" y1="32" x2="60" y2="32"/>
+          <a href="pages/mantenimientos-correctivos.html" class="explora__card">
+            <div class="explora__icon explora__icon--yellow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
               </svg>
             </div>
-            <h3 class="card__title">Commissioning</h3>
-            <p class="card__desc">
-              Puesta en marcha, proceso esencial para el óptimo desempeño, seguridad y garantía
-              de la central solar; nuestro equipo garantiza el inicio de funcionamiento.
-            </p>
-          </article>
+            <div class="explora__text">
+              <h3 class="explora__title">Mantenimientos Correctivos y Pruebas de Aislamiento</h3>
+              <p class="explora__desc">Diagnóstico y corrección de fallas en sistemas fotovoltaicos.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
 
-          <!-- Tarjeta 5: Operación y mantenimiento -->
-          <article class="card">
-            <div class="card__icon card__icon--blue" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M44 8a12 12 0 0 1 0 20L20 54a6 6 0 0 1-8-8L36 22A12 12 0 0 1 44 8z"/>
-                <line x1="30" y1="36" x2="38" y2="28"/>
-                <circle cx="44" cy="14" r="3" fill="currentColor" stroke="none"/>
-                <path d="M10 10 a28 28 0 0 1 28 -4" stroke-dasharray="4 3"/>
+          <a href="pages/supervision-ingenieria.html" class="explora__card">
+            <div class="explora__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
               </svg>
             </div>
-            <h3 class="card__title">Operación y Mantenimiento</h3>
-            <p class="card__desc">
-              Operación y mantenimiento eficiente de la central solar para lograr una óptima
-              producción del sistema y maximizar su vida útil.
-            </p>
-          </article>
+            <div class="explora__text">
+              <h3 class="explora__title">Supervisión de Ingeniería y Construcción de Obra</h3>
+              <p class="explora__desc">Control técnico y de calidad en cada etapa constructiva.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
 
-          <!-- Tarjeta 6: Estudios eléctricos -->
-          <article class="card">
-            <div class="card__icon card__icon--yellow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="10" y="8" width="44" height="48" rx="3"/>
-                <line x1="20" y1="22" x2="44" y2="22"/>
-                <line x1="20" y1="32" x2="44" y2="32"/>
-                <line x1="20" y1="42" x2="34" y2="42"/>
-                <polyline points="38,38 44,44 38,50" fill="none"/>
-                <polyline points="50,44 44,44" />
-                <circle cx="32" cy="14" r="3" fill="currentColor" stroke="none"/>
+          <a href="pages/ingenierias-iniciales.html" class="explora__card">
+            <div class="explora__icon explora__icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/>
               </svg>
             </div>
-            <h3 class="card__title">Estudios Eléctricos</h3>
-            <p class="card__desc">
-              Elaboración de estudios eléctricos especializados bajo las normas mexicanas,
-              con aprobación previa de planos de ingeniería para cada proyecto.
-            </p>
-          </article>
+            <div class="explora__text">
+              <h3 class="explora__title">Ingenierías Iniciales y Desarrollo de Proyectos</h3>
+              <p class="explora__desc">Estudios de factibilidad y diseño conceptual a la medida.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="pages/servicios-adicionales.html" class="explora__card">
+            <div class="explora__icon explora__icon--yellow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </div>
+            <div class="explora__text">
+              <h3 class="explora__title">Servicios Adicionales</h3>
+              <p class="explora__desc">Servicios especializados de valor agregado para tu sistema solar.</p>
+            </div>
+            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICACIONES ===================== -->
+    <section class="section certificaciones" id="certificaciones">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__tag">Respaldo técnico</span>
+          <h2 class="section__title">Certificaciones y Registros</h2>
+          <p class="section__subtitle">
+            Nuestros especialistas cuentan con certificaciones oficiales y la empresa opera con todos los registros legales vigentes.
+          </p>
+        </div>
+
+        <div class="cert__grid">
+
+          <!-- EC0586.01 -->
+          <div class="cert__card">
+            <div class="cert__badge cert__badge--green">EC0586.01</div>
+            <div class="cert__body">
+              <h3 class="cert__title">Instalación de Sistemas Fotovoltaicos</h3>
+              <p class="cert__desc">En residencia, comercio e industria.</p>
+              <span class="cert__issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                REDCONOCER — Prestadores de Servicios / Centro de Evaluación
+              </span>
+            </div>
+          </div>
+
+          <!-- EC1181 -->
+          <div class="cert__card">
+            <div class="cert__badge cert__badge--blue">EC1181</div>
+            <div class="cert__body">
+              <h3 class="cert__title">Supervisión de Sistemas Fotovoltaicos</h3>
+              <p class="cert__desc">En residencia, comercio e industria.</p>
+              <span class="cert__issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                REDCONOCER — Prestadores de Servicios / Centro de Evaluación
+              </span>
+            </div>
+          </div>
+
+          <!-- REPSE -->
+          <div class="cert__card cert__card--repse">
+            <div class="cert__badge cert__badge--yellow">REPSE</div>
+            <div class="cert__body">
+              <h3 class="cert__title">Registro de Prestadora de Servicios Especializados</h3>
+              <p class="cert__desc">u Obras Especializadas — vigente ante la STPS.</p>
+              <span class="cert__issuer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                Secretaría del Trabajo y Previsión Social (STPS)
+              </span>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -242,62 +278,6 @@
           </iframe>
         </div>
 
-      </div>
-    </section>
-
-    <!-- ===================== CERTIFICACIONES ===================== -->
-    <section class="section certificaciones" id="certificaciones">
-      <div class="section__inner">
-        <div class="section__header">
-          <span class="section__tag">Respaldo técnico</span>
-          <h2 class="section__title">Certificaciones y Registros</h2>
-          <p class="section__subtitle">
-            Nuestros especialistas cuentan con certificaciones oficiales y la empresa opera con todos los registros legales vigentes.
-          </p>
-        </div>
-
-        <div class="cert__grid">
-
-          <!-- EC0586.01 -->
-          <div class="cert__card">
-            <div class="cert__badge cert__badge--green">EC0586.01</div>
-            <div class="cert__body">
-              <h3 class="cert__title">Instalación de Sistemas Fotovoltaicos</h3>
-              <p class="cert__desc">En residencia, comercio e industria.</p>
-              <span class="cert__issuer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                REDCONOCER — Prestadores de Servicios / Centro de Evaluación
-              </span>
-            </div>
-          </div>
-
-          <!-- EC1181 -->
-          <div class="cert__card">
-            <div class="cert__badge cert__badge--blue">EC1181</div>
-            <div class="cert__body">
-              <h3 class="cert__title">Supervisión de Sistemas Fotovoltaicos</h3>
-              <p class="cert__desc">En residencia, comercio e industria.</p>
-              <span class="cert__issuer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                REDCONOCER — Prestadores de Servicios / Centro de Evaluación
-              </span>
-            </div>
-          </div>
-
-          <!-- REPSE -->
-          <div class="cert__card cert__card--repse">
-            <div class="cert__badge cert__badge--yellow">REPSE</div>
-            <div class="cert__body">
-              <h3 class="cert__title">Registro de Prestadora de Servicios Especializados</h3>
-              <p class="cert__desc">u Obras Especializadas — vigente ante la STPS.</p>
-              <span class="cert__issuer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-                Secretaría del Trabajo y Previsión Social (STPS)
-              </span>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -394,100 +374,6 @@
       </div>
     </section>
 
-    <!-- ===================== EXPLORA ===================== -->
-    <section class="section explora" id="explora">
-      <div class="section__inner">
-        <div class="section__header">
-          <span class="section__tag">Explora más</span>
-          <h2 class="section__title">Todo lo que hacemos</h2>
-          <p class="section__subtitle">
-            Descubre en detalle cada uno de nuestros servicios especializados y el trabajo que nos respalda.
-          </p>
-        </div>
-
-        <div class="explora__grid">
-
-          <a href="pages/nuestros-proyectos.html" class="explora__card">
-            <div class="explora__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Nuestros Proyectos</h3>
-              <p class="explora__desc">Proceso paso a paso de cómo desarrollamos cada instalación fotovoltaica.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/proyectos-realizados.html" class="explora__card">
-            <div class="explora__icon explora__icon--blue">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Principales Proyectos Realizados</h3>
-              <p class="explora__desc">Portafolio de los proyectos más destacados ejecutados por Solar Tech.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/mantenimientos-correctivos.html" class="explora__card">
-            <div class="explora__icon explora__icon--yellow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Mantenimientos Correctivos y Pruebas de Aislamiento</h3>
-              <p class="explora__desc">Diagnóstico y corrección de fallas en sistemas fotovoltaicos.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/supervision-ingenieria.html" class="explora__card">
-            <div class="explora__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Supervisión de Ingeniería y Construcción de Obra</h3>
-              <p class="explora__desc">Control técnico y de calidad en cada etapa constructiva.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/ingenierias-iniciales.html" class="explora__card">
-            <div class="explora__icon explora__icon--blue">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Ingenierías Iniciales y Desarrollo de Proyectos</h3>
-              <p class="explora__desc">Estudios de factibilidad y diseño conceptual a la medida.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/servicios-adicionales.html" class="explora__card">
-            <div class="explora__icon explora__icon--yellow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Servicios Adicionales</h3>
-              <p class="explora__desc">Servicios especializados de valor agregado para tu sistema solar.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-        </div>
       </div>
     </section>
 
@@ -498,10 +384,10 @@
         <!-- Columna izquierda: nav principal + páginas legales -->
         <div class="footer__left">
           <nav class="footer__nav" aria-label="Navegación footer">
-            <a href="#inicio"    class="footer__link">Inicio</a>
-            <a href="#productos" class="footer__link">Productos</a>
-            <a href="#ubicacion" class="footer__link">Ubicación</a>
-            <a href="#contacto"  class="footer__link">Contacto</a>
+            <a href="#inicio"       class="footer__link">Inicio</a>
+            <a href="pages/productos.html" class="footer__link">Productos</a>
+            <a href="#ubicacion"    class="footer__link">Ubicación</a>
+            <a href="#contacto"     class="footer__link">Contacto</a>
           </nav>
           <div class="footer__legal">
             <a href="about.html" class="footer__link footer__link--legal">Quiénes somos</a>
@@ -553,7 +439,7 @@
           <p class="footer__copy">&copy; 2026 Solar Tech. Todos los derechos reservados.</p>
           <p class="footer__legal-name">
             ENERTIUM SOLARTECH SOLUTIONS S.A. DE C.V.<br/>
-            <span class="footer__impi">Marca registrada ante el IMPI</span>
+            <span class="footer__impi">® Marca registrada ante el IMPI</span>
           </p>
         </div>
 

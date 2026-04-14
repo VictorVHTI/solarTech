@@ -87,14 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
         + `?subject=${encodeURIComponent(subject)}`
         + `&body=${encodeURIComponent(body)}`;
 
-      // Crear un <a> temporal y disparar click — única forma 100% fiable
-      // para abrir el cliente de correo desde un submit en todos los navegadores
-      const a = document.createElement('a');
-      a.href = mailto;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      // window.location.href es la única forma que Safari/macOS acepta
+      // como gesto de usuario real dentro del handler del submit.
+      // El truco del <a>.click() invisible lo bloquea silenciosamente.
+      window.location.href = mailto;
     });
   }
 });

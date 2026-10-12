@@ -4,449 +4,464 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solar Tech — Energía Fotovoltaica</title>
-    <!-- Fuente MADE Tommy via Fontshare -->
+    <meta name="description" content="Solar Tech: ingeniería, construcción y supervisión de sistemas fotovoltaicos para hogar, comercio e industria. Cotiza tu sistema solar en minutos." />
+    <!-- Fuentes: MADE Tommy (títulos) via Fontshare + Inter (texto) via Google Fonts -->
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=made-tommy@400,500,700,800&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   </head>
-  <body>
+  <body class="site home">
 
     <!-- ===================== HEADER ===================== -->
-    <site-header></site-header>
+    <site-header variant="overlay"></site-header>
 
-    <!-- ===================== HERO / INICIO ===================== -->
+    <!-- ===================== HERO (VIDEO) ===================== -->
+    <section class="h-hero" id="inicio">
+      <!--
+        VIDEO PLACEHOLDER (Mixkit, licencia libre).
+        Reemplazar por el video del cliente: assets/video/hero.mp4 (+ hero.webm opcional)
+        y actualizar el poster con un frame del mismo video.
+      -->
+      <video class="h-hero__video" id="hero-video" autoplay muted loop playsinline preload="metadata"
+             poster="assets/img/Proyecto_Talayote/1.webp" aria-hidden="true">
+        <source src="https://assets.mixkit.co/videos/23491/23491-720.mp4" type="video/mp4" />
+      </video>
+      <div class="h-hero__shade" aria-hidden="true"></div>
 
-    <section class="hero" id="inicio">
-      <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="hero__content">
-        <span class="hero__badge">⚡ Solar Power</span>
-        <h1 class="hero__title">
-          Ingeniería y precisión técnica<br />
-          <span class="hero__title--highlight">en cada rayo de sol</span>
-        </h1>
-        <p class="hero__desc">
-          Solar Tech nació como una propuesta innovadora dentro del sector de las energías
-          renovables, con un enfoque especial en la energía fotovoltaica. La marca busca
-          aprovechar la fuerza inagotable del sol mediante la tecnología, convirtiéndola en
-          una fuente accesible, confiable y respetuosa con el medio ambiente.
-        </p>
-        <div class="hero__actions">
-          <a href="pages/productos.html" class="btn btn--primary">Ver productos</a>
-          <a href="#contacto"  class="btn btn--outline">Contáctanos</a>
+      <div class="h-hero__inner">
+        <div class="h-hero__copy">
+          <span class="h-eyebrow h-eyebrow--light">
+            <span class="h-eyebrow__dot" aria-hidden="true"></span>
+            Ingeniería fotovoltaica EPC · Morelia, Mich.
+          </span>
+          <h1 class="h-hero__title">
+            Convertimos el sol<br />
+            en <em>energía que rinde.</em>
+          </h1>
+          <p class="h-hero__desc">
+            Diseñamos, construimos y supervisamos sistemas fotovoltaicos para hogares,
+            comercios e industria — con precisión técnica en cada panel.
+          </p>
+          <div class="h-hero__actions">
+            <a href="#proyectos" class="h-btn h-btn--sun">
+              Ver proyectos realizados
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#contacto" class="h-btn h-btn--ghost">Hablar con un asesor</a>
+          </div>
+
+          <ul class="h-hero__stats" aria-label="Solar Tech en números">
+            <li><strong data-count="1.1" data-decimals="1">1.1</strong><span>MWp instalados</span></li>
+            <li><strong data-count="50" data-suffix="+">50+</strong><span>Instalaciones</span></li>
+            <li><strong data-count="100" data-suffix="%">100%</strong><span>Clientes satisfechos</span></li>
+          </ul>
+        </div>
+
+        <!-- ── Cotización rápida ── -->
+        <aside class="quote" id="cotizar" aria-labelledby="quote-title">
+          <div class="quote__head">
+            <h2 class="quote__title" id="quote-title">Cotización rápida</h2>
+            <p class="quote__sub">Estima tu sistema en 30 segundos.</p>
+          </div>
+
+          <form class="quote__form" id="quote-form" novalidate>
+            <fieldset class="quote__field">
+              <legend class="quote__label">¿Para dónde es?</legend>
+              <div class="quote__seg" role="radiogroup">
+                <label><input type="radio" name="tipo" value="hogar" checked /><span>Hogar</span></label>
+                <label><input type="radio" name="tipo" value="negocio" /><span>Negocio</span></label>
+                <label><input type="radio" name="tipo" value="industria" /><span>Industria</span></label>
+              </div>
+            </fieldset>
+
+            <div class="quote__field">
+              <label class="quote__label" for="quote-bill">
+                Pago <span id="quote-period">bimestral</span> a CFE
+              </label>
+              <div class="quote__bill">
+                <span class="quote__bill-value" id="quote-bill-value">$3,500</span>
+                <span class="quote__bill-unit">MXN</span>
+              </div>
+              <input type="range" id="quote-bill" class="quote__range" min="500" max="60000" step="500" value="3500" />
+            </div>
+
+            <div class="quote__result" aria-live="polite">
+              <div class="quote__metric">
+                <strong id="quote-kwp">—</strong>
+                <span>kWp sugeridos</span>
+              </div>
+              <div class="quote__metric">
+                <strong id="quote-panels">—</strong>
+                <span>Paneles aprox.</span>
+              </div>
+              <div class="quote__metric quote__metric--wide">
+                <strong id="quote-saving">—</strong>
+                <span>Ahorro estimado al año</span>
+              </div>
+            </div>
+
+            <div class="quote__row">
+              <div class="quote__field">
+                <label class="quote__label" for="quote-name">Nombre</label>
+                <input type="text" id="quote-name" class="quote__input" placeholder="Tu nombre" autocomplete="name" required />
+              </div>
+              <div class="quote__field">
+                <label class="quote__label" for="quote-city">Ciudad</label>
+                <input type="text" id="quote-city" class="quote__input" placeholder="Ej. Morelia" autocomplete="address-level2" />
+              </div>
+            </div>
+
+            <button type="submit" class="h-btn h-btn--sun h-btn--block">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.32-1.96 1.37-.5.05-1.13.07-1.83-.11a16.7 16.7 0 0 1-1.65-.61c-2.9-1.25-4.8-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.3.58-.37.78-.37h.56c.18 0 .42-.07.66.5.24.58.83 2 .9 2.15.07.15.12.32.02.51-.1.2-.15.32-.29.5l-.44.51c-.15.15-.3.3-.13.6.17.29.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.38 1.47.3.15.47.12.64-.07.18-.2.74-.86.94-1.16.2-.3.39-.24.66-.15.27.1 1.71.81 2 .96.3.15.5.22.57.34.07.12.07.7-.17 1.38z"/></svg>
+              Enviar cotización por WhatsApp
+            </button>
+            <p class="quote__note">Estimación referencial. Un ingeniero valida tu recibo y te entrega una propuesta formal sin costo.</p>
+          </form>
+        </aside>
+      </div>
+
+      <button class="h-hero__toggle" id="hero-toggle" type="button" aria-label="Pausar video">
+        <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg>
+      </button>
+    </section>
+
+    <!-- ===================== CINTA DE CLIENTES ===================== -->
+    <div class="h-ticker" aria-label="Clientes que confían en nosotros">
+      <div class="h-ticker__track">
+        <span>Universidad Marista</span><i aria-hidden="true">✦</i>
+        <span>Woolworth Mexicali</span><i aria-hidden="true">✦</i>
+        <span>Talayote</span><i aria-hidden="true">✦</i>
+        <span>Seguros Álamo</span><i aria-hidden="true">✦</i>
+        <span>Royalton</span><i aria-hidden="true">✦</i>
+        <span>Planet</span><i aria-hidden="true">✦</i>
+        <!-- duplicado para loop continuo -->
+        <span aria-hidden="true">Universidad Marista</span><i aria-hidden="true">✦</i>
+        <span aria-hidden="true">Woolworth Mexicali</span><i aria-hidden="true">✦</i>
+        <span aria-hidden="true">Talayote</span><i aria-hidden="true">✦</i>
+        <span aria-hidden="true">Seguros Álamo</span><i aria-hidden="true">✦</i>
+        <span aria-hidden="true">Royalton</span><i aria-hidden="true">✦</i>
+        <span aria-hidden="true">Planet</span><i aria-hidden="true">✦</i>
+      </div>
+    </div>
+
+    <!-- ===================== PROYECTOS REALIZADOS ===================== -->
+    <section class="h-section h-projects" id="proyectos">
+      <div class="h-wrap">
+        <div class="h-head h-head--split">
+          <div>
+            <span class="h-eyebrow">Portafolio</span>
+            <h2 class="h-title">Proyectos que ya generan energía</h2>
+          </div>
+          <div class="h-projects__ctrl">
+            <a href="pages/proyectos-realizados.html" class="h-link">Ver portafolio completo</a>
+            <button class="h-arrow" id="proj-prev" type="button" aria-label="Proyecto anterior">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="h-arrow" id="proj-next" type="button" aria-label="Siguiente proyecto">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Estadísticas rápidas -->
-      <div class="hero__stats" aria-label="Estadísticas">
-        <div class="stat">
-          <span class="stat__number">50+</span>
-          <span class="stat__label">Instalaciones</span>
+      <div class="h-projects__rail" id="proj-rail" tabindex="0" aria-label="Proyectos realizados">
+        <a href="pages/proyectos-realizados.html#talayote" class="pcard">
+          <img src="assets/img/Proyecto_Talayote/1.webp" alt="Vista aérea de la planta Talayote con paneles solares" loading="lazy" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Industrial · EPC</span>
+            <h3 class="pcard__title">Talayote</h3>
+            <p class="pcard__loc">Villagrán, Gto.</p>
+            <dl class="pcard__specs">
+              <div><dt>Capacidad</dt><dd>499.12 kWp</dd></div>
+              <div><dt>Paneles</dt><dd>850</dd></div>
+            </dl>
+          </div>
+        </a>
+
+        <a href="pages/proyectos-realizados.html#woolworth" class="pcard">
+          <img src="assets/img/Proyecto_Woolworth/1.webp" alt="Techo de tienda Woolworth Mexicali cubierto de paneles solares" loading="lazy" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Comercial · EPC</span>
+            <h3 class="pcard__title">Woolworth Mexicali</h3>
+            <p class="pcard__loc">Mexicali, B.C.</p>
+            <dl class="pcard__specs">
+              <div><dt>Capacidad</dt><dd>450.2 kWp</dd></div>
+              <div><dt>Paneles</dt><dd>698</dd></div>
+            </dl>
+          </div>
+        </a>
+
+        <a href="pages/proyectos-realizados.html#marista" class="pcard">
+          <img src="assets/img/Proyecto_Universidad_Marista/1.webp" alt="Instalación de paneles en la azotea de la Universidad Marista" loading="lazy" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Educativo · EPC</span>
+            <h3 class="pcard__title">Universidad Marista</h3>
+            <p class="pcard__loc">Tláhuac, CDMX</p>
+            <dl class="pcard__specs">
+              <div><dt>Capacidad</dt><dd>158 kWp</dd></div>
+              <div><dt>Paneles</dt><dd>290</dd></div>
+            </dl>
+          </div>
+        </a>
+
+        <a href="pages/proyectos-realizados.html#seguros-alamo" class="pcard">
+          <img src="assets/img/Proyecto_Seguros_Alamo/1.webp" alt="Vista aérea del edificio de Seguros Álamo con paneles solares" loading="lazy" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Corporativo · EPC</span>
+            <h3 class="pcard__title">Seguros Álamo</h3>
+            <p class="pcard__loc">Morelia, Mich.</p>
+            <dl class="pcard__specs">
+              <div><dt>Capacidad</dt><dd>42.48 kWp</dd></div>
+              <div><dt>Paneles</dt><dd>72</dd></div>
+            </dl>
+          </div>
+        </a>
+
+        <a href="pages/supervision-ingenieria.html#royalton" class="pcard">
+          <img src="assets/img/Proyecto_Royalton/1.webp" alt="Proyecto Royalton supervisado por Solar Tech" loading="lazy" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Supervisión de obra</span>
+            <h3 class="pcard__title">Royalton</h3>
+            <p class="pcard__loc">Proyecto supervisado</p>
+          </div>
+        </a>
+
+        <a href="pages/supervision-ingenieria.html#planet" class="pcard">
+          <img src="assets/img/Proyecto_Planet/1.webp" alt="Proyecto Planet supervisado por Solar Tech" loading="lazy" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Supervisión de obra</span>
+            <h3 class="pcard__title">Planet</h3>
+            <p class="pcard__loc">Proyecto supervisado</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== SOLUCIONES ===================== -->
+    <section class="h-section h-services" id="soluciones">
+      <div class="h-wrap">
+        <div class="h-head">
+          <span class="h-eyebrow">Soluciones</span>
+          <h2 class="h-title">Todo el ciclo de tu proyecto solar, con un solo equipo</h2>
         </div>
-        <div class="stat__divider" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat__number">3</span>
-          <span class="stat__label">Años de experiencia</span>
-        </div>
-        <div class="stat__divider" aria-hidden="true"></div>
-        <div class="stat">
-          <span class="stat__number">100%</span>
-          <span class="stat__label">Clientes satisfechos</span>
+
+        <div class="svc">
+          <a href="pages/productos.html" class="svc__item svc__item--feature">
+            <span class="svc__num">01</span>
+            <div>
+              <h3 class="svc__title">Productos y Servicios</h3>
+              <p class="svc__desc">Ingeniería, construcción, commissioning y todas nuestras soluciones fotovoltaicas.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/nuestros-proyectos.html" class="svc__item">
+            <span class="svc__num">02</span>
+            <div>
+              <h3 class="svc__title">Ingeniería Integral EPC</h3>
+              <p class="svc__desc">Cómo desarrollamos cada instalación, paso a paso.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/ingenierias-iniciales.html" class="svc__item">
+            <span class="svc__num">03</span>
+            <div>
+              <h3 class="svc__title">Ingenierías Iniciales</h3>
+              <p class="svc__desc">Factibilidad y diseño conceptual a la medida.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/supervision-ingenieria.html" class="svc__item">
+            <span class="svc__num">04</span>
+            <div>
+              <h3 class="svc__title">Supervisión de Obra</h3>
+              <p class="svc__desc">Control técnico y de calidad en cada etapa constructiva.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/mantenimientos-correctivos.html" class="svc__item">
+            <span class="svc__num">05</span>
+            <div>
+              <h3 class="svc__title">Mantenimiento y Pruebas</h3>
+              <p class="svc__desc">Correctivos y pruebas de aislamiento para sistemas en operación.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/servicios-adicionales.html" class="svc__item">
+            <span class="svc__num">06</span>
+            <div>
+              <h3 class="svc__title">Servicios Adicionales</h3>
+              <p class="svc__desc">Servicios especializados de valor agregado.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== EXPLORA ===================== -->
-    <section class="section explora" id="explora">
-      <div class="section__inner">
-        <div class="section__header">
-          <span class="section__tag">Explora más</span>
-          <h2 class="section__title">Todo lo que hacemos</h2>
-          <p class="section__subtitle">
-            Descubre en detalle cada uno de nuestros servicios especializados y el trabajo que nos respalda.
-          </p>
+    <!-- ===================== PROCESO ===================== -->
+    <section class="h-section h-process">
+      <div class="h-wrap">
+        <div class="h-head h-head--light">
+          <span class="h-eyebrow h-eyebrow--light">Cómo trabajamos</span>
+          <h2 class="h-title">De la idea a la energía en 5 pasos</h2>
         </div>
-
-        <div class="explora__grid">
-
-          <!-- Card: Productos y Servicios (primero) -->
-          <a href="pages/productos.html" class="explora__card explora__card--featured">
-            <div class="explora__icon explora__icon--green">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <rect x="2" y="7" width="20" height="14" rx="2"/>
-                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-                <line x1="12" y1="12" x2="12" y2="16"/>
-                <line x1="10" y1="14" x2="14" y2="14"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Productos y Servicios</h3>
-              <p class="explora__desc">Conoce todas nuestras soluciones fotovoltaicas: ingeniería, construcción, commissioning y más.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/nuestros-proyectos.html" class="explora__card">
-            <div class="explora__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Nuestros Proyectos</h3>
-              <p class="explora__desc">Proceso paso a paso de cómo desarrollamos cada instalación fotovoltaica.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/proyectos-realizados.html" class="explora__card">
-            <div class="explora__icon explora__icon--blue">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Principales Proyectos Realizados</h3>
-              <p class="explora__desc">Portafolio de los proyectos más destacados ejecutados por Solar Tech.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/mantenimientos-correctivos.html" class="explora__card">
-            <div class="explora__icon explora__icon--yellow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Mantenimientos Correctivos y Pruebas de Aislamiento</h3>
-              <p class="explora__desc">Diagnóstico y corrección de fallas en sistemas fotovoltaicos.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/supervision-ingenieria.html" class="explora__card">
-            <div class="explora__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Supervisión de Ingeniería y Construcción de Obra</h3>
-              <p class="explora__desc">Control técnico y de calidad en cada etapa constructiva.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/ingenierias-iniciales.html" class="explora__card">
-            <div class="explora__icon explora__icon--blue">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Ingenierías Iniciales y Desarrollo de Proyectos</h3>
-              <p class="explora__desc">Estudios de factibilidad y diseño conceptual a la medida.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <a href="pages/servicios-adicionales.html" class="explora__card">
-            <div class="explora__icon explora__icon--yellow">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
-              </svg>
-            </div>
-            <div class="explora__text">
-              <h3 class="explora__title">Servicios Adicionales</h3>
-              <p class="explora__desc">Servicios especializados de valor agregado para tu sistema solar.</p>
-            </div>
-            <svg class="explora__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-        </div>
+        <ol class="steps">
+          <li class="step"><span class="step__n">1</span><h3>Visita técnica</h3><p>Analizamos tu consumo, espacio y recibo CFE.</p></li>
+          <li class="step"><span class="step__n">2</span><h3>Diseño FV</h3><p>Ingeniería y simulación del sistema óptimo.</p></li>
+          <li class="step"><span class="step__n">3</span><h3>Procura y construcción</h3><p>Equipos certificados e instalación supervisada.</p></li>
+          <li class="step"><span class="step__n">4</span><h3>Trámites CFE</h3><p>Gestionamos la interconexión de principio a fin.</p></li>
+          <li class="step"><span class="step__n">5</span><h3>Operación y mantenimiento</h3><p>Monitoreo y soporte para que siga rindiendo.</p></li>
+        </ol>
       </div>
     </section>
 
     <!-- ===================== CERTIFICACIONES ===================== -->
-    <section class="section certificaciones" id="certificaciones">
-      <div class="section__inner">
-        <div class="section__header">
-          <span class="section__tag">Respaldo técnico</span>
-          <h2 class="section__title">Certificaciones y Registros</h2>
-          <p class="section__subtitle">
-            Nuestros especialistas cuentan con certificaciones oficiales y la empresa opera con todos los registros legales vigentes.
-          </p>
+    <section class="h-section h-section--cream" id="certificaciones">
+      <div class="h-wrap">
+        <div class="h-head h-head--split">
+          <div>
+            <span class="h-eyebrow">Respaldo técnico</span>
+            <h2 class="h-title">Certificados y registrados</h2>
+          </div>
+          <p class="h-lead">Nuestros especialistas cuentan con certificaciones oficiales y la empresa opera con todos los registros legales vigentes.</p>
         </div>
 
-        <div class="cert__grid">
-
-          <!-- EC0586.01 -->
-          <div class="cert__card">
-            <div class="cert__badge cert__badge--green">EC0586.01</div>
-            <div class="cert__body">
-              <h3 class="cert__title">Instalación de Sistemas Fotovoltaicos</h3>
-              <p class="cert__desc">En residencia, comercio e industria.</p>
-              <span class="cert__issuer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                REDCONOCER — Prestadores de Servicios / Centro de Evaluación
-              </span>
+        <div class="creds">
+          <article class="cred">
+            <div class="cred__media">
+              <img src="assets/img/Proyecto_Woolworth/16.webp" alt="Técnico de Solar Tech instalando módulos fotovoltaicos" loading="lazy" />
+              <span class="cred__kind">Certificación</span>
             </div>
-          </div>
-
-          <!-- EC1181 -->
-          <div class="cert__card">
-            <div class="cert__badge cert__badge--blue">EC1181</div>
-            <div class="cert__body">
-              <h3 class="cert__title">Supervisión de Sistemas Fotovoltaicos</h3>
-              <p class="cert__desc">En residencia, comercio e industria.</p>
-              <span class="cert__issuer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                REDCONOCER — Prestadores de Servicios / Centro de Evaluación
+            <div class="cred__body">
+              <span class="cred__seal">
+                <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="arc-ec0586" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><circle cx="50" cy="50" r="46"/><text><textPath href="#arc-ec0586" textLength="236" lengthAdjust="spacing">Estándar de competencia · RedConocer ·</textPath></text></svg>
+                <span class="cred__code">EC<br />0586.01</span>
               </span>
+              <h3 class="cred__title">Instalación de Sistemas Fotovoltaicos</h3>
+              <p class="cred__desc">En residencia, comercio e industria.</p>
+              <div class="cred__foot"><span>REDCONOCER · Centro de Evaluación</span><span class="cred__ok">Vigente</span></div>
             </div>
-          </div>
+          </article>
 
-          <!-- REPSE -->
-          <div class="cert__card cert__card--repse">
-            <div class="cert__badge cert__badge--yellow">REPSE</div>
-            <div class="cert__body">
-              <h3 class="cert__title">Registro de Prestadora de Servicios Especializados</h3>
-              <p class="cert__desc">u Obras Especializadas — vigente ante la STPS.</p>
-              <span class="cert__issuer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-                Secretaría del Trabajo y Previsión Social (STPS)
+          <article class="cred cred--blue">
+            <div class="cred__media">
+              <img src="assets/img/Proyecto_Woolworth/7.webp" alt="Supervisor de Solar Tech revisando un tablero eléctrico" loading="lazy" />
+              <span class="cred__kind">Certificación</span>
+            </div>
+            <div class="cred__body">
+              <span class="cred__seal">
+                <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="arc-ec1181" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><circle cx="50" cy="50" r="46"/><text><textPath href="#arc-ec1181" textLength="236" lengthAdjust="spacing">Estándar de competencia · RedConocer ·</textPath></text></svg>
+                <span class="cred__code">EC<br />1181</span>
               </span>
+              <h3 class="cred__title">Supervisión de Sistemas Fotovoltaicos</h3>
+              <p class="cred__desc">En residencia, comercio e industria.</p>
+              <div class="cred__foot"><span>REDCONOCER · Centro de Evaluación</span><span class="cred__ok">Vigente</span></div>
             </div>
-          </div>
+          </article>
 
+          <article class="cred cred--sun">
+            <div class="cred__media">
+              <img src="assets/img/Proyecto_Woolworth/14.webp" alt="Equipo de Solar Tech colocando paneles en una cubierta" loading="lazy" />
+              <span class="cred__kind">Registro</span>
+            </div>
+            <div class="cred__body">
+              <span class="cred__seal">
+                <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="arc-repse" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><circle cx="50" cy="50" r="46"/><text><textPath href="#arc-repse" textLength="236" lengthAdjust="spacing">Registro oficial · STPS · Obras especializadas ·</textPath></text></svg>
+                <span class="cred__code">REPSE</span>
+              </span>
+              <h3 class="cred__title">Prestadora de Servicios Especializados</h3>
+              <p class="cred__desc">Registro de Prestadora de Servicios Especializados u Obras Especializadas.</p>
+              <div class="cred__foot"><span>Secretaría del Trabajo (STPS)</span><span class="cred__ok">Vigente</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================== UBICACIÓN ===================== -->
-    <section class="section ubicacion" id="ubicacion">
-      <div class="section__inner ubicacion__inner">
+    <!-- ===================== CTA ===================== -->
+    <section class="h-cta">
+      <img class="h-cta__img" src="assets/img/Proyecto_Woolworth/1.webp" alt="" loading="lazy" />
+      <div class="h-wrap h-cta__inner">
+        <h2 class="h-cta__title">¿Cuánto podrías ahorrar con energía solar?</h2>
+        <a href="#cotizar" class="h-btn h-btn--sun">Calcular mi ahorro</a>
+      </div>
+    </section>
 
-        <!-- Información -->
-        <div class="ubicacion__info">
-          <span class="section__tag">¿Dónde estamos?</span>
-          <h2 class="section__title">Nuestra Ubicación</h2>
-          <p class="ubicacion__desc">
-            Nos encontramos estratégicamente ubicados para atender a nuestros clientes en
-            toda la región. Visítanos o coordina una visita técnica sin costo a tu domicilio o empresa.
-          </p>
+    <!-- ===================== CONTACTO + UBICACIÓN ===================== -->
+    <section class="h-section h-contact" id="contacto">
+      <div class="h-wrap h-contact__grid">
 
-          <ul class="ubicacion__details">
-            <li class="ubicacion__item">
-              <svg class="ubicacion__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>García Obeso 852, Col. Ventura Puente, CP: 58020, Morelia, Mich.</span>
+        <div class="h-contact__info">
+          <span class="h-eyebrow">¿Hablamos?</span>
+          <h2 class="h-title">Contáctanos</h2>
+          <p class="h-lead">Escríbenos por WhatsApp o envíanos un correo. Respondemos en menos de 1 hora en horario laboral.</p>
+
+          <div class="agents">
+            <a href="https://wa.me/524431044109?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Solar%20Tech"
+               target="_blank" rel="noopener noreferrer" class="agent" id="whatsapp-btn">
+              <span class="agent__avatar" aria-hidden="true">LH</span>
+              <span class="agent__txt"><strong>Lizbet Herrera</strong><small>Asesora comercial · WhatsApp</small></span>
+            </a>
+            <a href="https://wa.me/524435275463?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Solar%20Tech"
+               target="_blank" rel="noopener noreferrer" class="agent">
+              <span class="agent__avatar" aria-hidden="true">MC</span>
+              <span class="agent__txt"><strong>María de Lourdes Cinco</strong><small>Asesora comercial · WhatsApp</small></span>
+            </a>
+          </div>
+
+          <ul class="h-contact__details" id="ubicacion">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              García Obeso 852, Col. Ventura Puente, CP 58020, Morelia, Mich.
             </li>
-            <li class="ubicacion__item">
-              <svg class="ubicacion__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <span>Lun–Vie: 8:00 am – 6:00 pm &nbsp;|&nbsp; Sáb: 9:00 am – 1:00 pm</span>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Lun–Vie 8:00–18:00 · Sáb 9:00–13:00
             </li>
-            <li class="ubicacion__item">
-              <svg class="ubicacion__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.5 19.79 19.79 0 0 1 1.61 3.87 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <span>+52 (443) 104-4109</span>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.5 19.79 19.79 0 0 1 1.61 3.87 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +52 (443) 104-4109
             </li>
           </ul>
         </div>
 
-        <!-- Mapa Google Maps -->
-        <div class="ubicacion__map" aria-label="Mapa de ubicación">
-          <iframe
-            class="map-iframe"
-            title="Ubicación Solar Tech — García Obeso 852, Morelia"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.3!2d-101.1894!3d19.7069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d0e615a1b7f0b%3A0x0!2zR2FyY8OtYSBPYmVzbyA4NTIsIFZlbnR1cmEgUHVlbnRlLCA1ODAyMCBNb3JlbGlhLCBNaWNoLg!5e0!3m2!1ses!2smx!4v1700000000000"
-            width="100%"
-            height="380"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===================== CONTACTO ===================== -->
-    <section class="section contacto" id="contacto">
-      <div class="section__inner contacto__inner">
-        <span class="section__tag">¿Hablamos?</span>
-        <h2 class="section__title">Contáctanos</h2>
-        <p class="contacto__desc">
-          ¿Tienes dudas sobre nuestros productos o quieres una cotización personalizada?
-          Escríbenos por WhatsApp o envíanos un correo y te respondemos al instante.
-        </p>
-
-        <!-- ── Botones WhatsApp ── -->
-        <div class="contacto__wa-group">
-          <a href="https://wa.me/4431044109?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Solar%20Tech"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn--whatsapp no-border" id="whatsapp-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-            </svg>
-            <span>
-              <span class="contacto__wa-label">Agente: Lizbet Herrera</span>
-            </span>
-          </a>
-
-          <a href="https://wa.me/524435275463?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Solar%20Tech"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn--whatsapp no-border">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-            </svg>
-            <span>
-              <span class="contacto__wa-label">Agente: María de Lourdes Cinco</span>
-            </span>
-          </a>
-        </div>
-
-        <!-- ── Formulario de correo ── -->
-        <div class="contacto__form-wrap">
-          <div class="contacto__form-header">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <span>Envíanos un correo</span>
-          </div>
-          <form class="contacto__form" id="contacto-form" novalidate>
-            <div class="contacto__field">
-              <label for="mail-subject" class="contacto__label">Asunto</label>
-              <input
-                type="text"
-                id="mail-subject"
-                class="contacto__input"
-                placeholder="Ej. Cotización sistema fotovoltaico"
-                maxlength="120"
-                required
-              />
-            </div>
-            <div class="contacto__field">
-              <label for="mail-body" class="contacto__label">Mensaje</label>
-              <textarea
-                id="mail-body"
-                class="contacto__textarea"
-                rows="5"
-                placeholder="Cuéntanos sobre tu proyecto o consulta..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary contacto__submit">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-              Enviar correo
-            </button>
+        <div class="h-contact__side">
+          <form class="mailbox" id="contacto-form" novalidate>
+            <h3 class="mailbox__title">Envíanos un correo</h3>
+            <label for="mail-subject" class="mailbox__label">Asunto</label>
+            <input type="text" id="mail-subject" class="mailbox__input" placeholder="Ej. Cotización sistema fotovoltaico" maxlength="120" required />
+            <label for="mail-body" class="mailbox__label">Mensaje</label>
+            <textarea id="mail-body" class="mailbox__input" rows="4" placeholder="Cuéntanos sobre tu proyecto o consulta..." required></textarea>
+            <button type="submit" class="h-btn h-btn--ink">Enviar correo</button>
           </form>
-        </div>
 
-        <div class="contacto__badges">
-          <div class="contacto__badge">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Respuesta en menos de 1 hora
-          </div>
-          <div class="contacto__badge">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Cotización sin costo
-          </div>
-          <div class="contacto__badge">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Atención personalizada
+          <div class="h-contact__map">
+            <iframe
+              title="Ubicación Solar Tech — García Obeso 852, Morelia"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.3!2d-101.1894!3d19.7069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d0e615a1b7f0b%3A0x0!2zR2FyY8OtYSBPYmVzbyA4NTIsIFZlbnR1cmEgUHVlbnRlLCA1ODAyMCBNb3JlbGlhLCBNaWNoLg!5e0!3m2!1ses!2smx!4v1700000000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
           </div>
         </div>
-      </div>
-    </section>
 
       </div>
     </section>
 
     <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-      <div class="footer__inner">
-
-        <!-- Columna izquierda: nav principal + páginas legales -->
-        <div class="footer__left">
-          <nav class="footer__nav" aria-label="Navegación footer">
-            <a href="#inicio"       class="footer__link">Inicio</a>
-            <a href="pages/productos.html" class="footer__link">Productos</a>
-            <a href="#ubicacion"    class="footer__link">Ubicación</a>
-            <a href="#contacto"     class="footer__link">Contacto</a>
-          </nav>
-          <div class="footer__legal">
-            <a href="about.html" class="footer__link footer__link--legal">Quiénes somos</a>
-            <a href="terms.html" class="footer__link footer__link--legal">Términos y condiciones</a>
-          </div>
-        </div>
-
-        <!-- Columna central: logo -->
-        <div class="footer__brand">
-          <img
-            src="assets/img/logo.png"
-            alt="Solar Tech Logo"
-            class="footer__logo-img"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-          />
-          <p class="footer__logo-fallback">☀️ Solar Tech</p>
-          <p class="footer__tagline">Energía limpia para el futuro.</p>
-        </div>
-
-        <!-- Columna derecha: redes sociales + copyright -->
-        <div class="footer__right">
-          <p class="footer__social-label">Síguenos</p>
-          <div class="footer__social">
-
-            <!-- Facebook -->
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
-
-            <!-- TikTok -->
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-              </svg>
-            </a>
-
-          </div>
-          <p class="footer__copy">&copy; 2026 Solar Tech. Todos los derechos reservados.</p>
-          <p class="footer__legal-name">
-            ENERTIUM SOLARTECH SOLUTIONS S.A. DE C.V.<br/>
-            <span class="footer__impi">® Marca registrada ante el IMPI</span>
-          </p>
-        </div>
-
-      </div>
-    </footer>
+    <site-footer></site-footer>
 
     <script src="js/SiteHeader.js"></script>
+    <script src="js/SiteFooter.js"></script>
+    <script src="js/site.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>

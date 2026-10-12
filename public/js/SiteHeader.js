@@ -6,8 +6,8 @@
  *   <site-header></site-header>
  *
  * Atributo opcional:
- *   depth="0"  → raíz public/   (default)
- *   depth="1"  → pages/
+ *   variant="overlay" → header transparente sobre el hero (video);
+ *                       se vuelve sólido al hacer scroll o abrir el menú.
  *
  * El componente detecta la profundidad automáticamente
  * mirando window.location.pathname.
@@ -25,10 +25,11 @@ class SiteHeader extends HTMLElement {
     const root    = inPages ? '../'  : '';       // prefijo para assets/css
     const home    = inPages ? '../index.html' : 'index.html';
     const pages   = inPages ? '../pages/'    : 'pages/';
+    const overlay = this.getAttribute('variant') === 'overlay';
 
     // ── HTML del header ─────────────────────────────────────────
     this.innerHTML = /* html */`
-      <header class="header" id="header">
+      <header class="header${overlay ? ' header--overlay' : ''}" id="header">
         <div class="header__inner">
 
           <!-- Logo -->
@@ -58,6 +59,7 @@ class SiteHeader extends HTMLElement {
           <!-- Nav desktop -->
           <nav class="nav" id="nav" aria-label="Navegación principal">
             <a href="${home}#inicio"    class="nav__link">Inicio</a>
+            <a href="${home}#proyectos" class="nav__link">Proyectos</a>
             <a href="${home}#ubicacion" class="nav__link">Ubicación</a>
 
             <!-- Dropdown Explora -->
@@ -74,31 +76,31 @@ class SiteHeader extends HTMLElement {
               </button>
               <div class="nav__dropdown-menu" id="nav-dropdown-menu" role="menu">
                 <a href="${pages}productos.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Proyecto_Woolworth/5.webp" alt="" loading="lazy" />
                   Productos y Servicios
                 </a>
                 <a href="${pages}nuestros-proyectos.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Proyecto_Talayote/2.webp" alt="" loading="lazy" />
                   Nuestros Proyectos
                 </a>
                 <a href="${pages}proyectos-realizados.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Proyecto_Talayote/12.webp" alt="" loading="lazy" />
                   Proyectos Realizados
                 </a>
                 <a href="${pages}mantenimientos-correctivos.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Mantenimientos_correctivos/4.webp" alt="" loading="lazy" />
                   Mantenimientos Correctivos
                 </a>
                 <a href="${pages}supervision-ingenieria.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Proyecto_Woolworth/7.webp" alt="" loading="lazy" />
                   Supervisión de Ingeniería
                 </a>
                 <a href="${pages}ingenierias-iniciales.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Proyecto_Woolworth/13.webp" alt="" loading="lazy" />
                   Ingenierías Iniciales
                 </a>
                 <a href="${pages}servicios-adicionales.html" class="nav__dropdown-item" role="menuitem">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                  <img class="nav__thumb" src="${root}assets/img/Due_Diligence/2.webp" alt="" loading="lazy" />
                   Servicios Adicionales
                 </a>
               </div>
@@ -135,6 +137,7 @@ class SiteHeader extends HTMLElement {
       e.stopPropagation();
       const isOpen = nav.classList.toggle('nav--open');
       hamburger.classList.toggle('open', isOpen);
+      this.querySelector('#header').classList.toggle('menu-open', isOpen);
       hamburger.setAttribute('aria-expanded', String(isOpen));
     });
 
@@ -217,6 +220,7 @@ class SiteHeader extends HTMLElement {
     const nav       = this.querySelector('#nav');
     nav?.classList.remove('nav--open');
     hamburger?.classList.remove('open');
+    this.querySelector('#header')?.classList.remove('menu-open');
     hamburger?.setAttribute('aria-expanded', 'false');
   }
 

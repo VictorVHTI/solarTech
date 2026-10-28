@@ -438,3 +438,31 @@
   .h-projects__rail { grid-auto-columns: 82%; scroll-padding-inline: 1rem; padding-inline: 1rem; }
   .h-hero__toggle { right: 1rem; bottom: 1rem; }
 }
+
+/* Servicio nuevo destacado (termografía con drones) */
+.svc__item--new {
+  grid-column: 1 / -1;
+  border-right: 0 !important;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.svc__item--new .svc__desc { max-width: 56ch; }
+.svc__visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%);
+  mask-image: linear-gradient(90deg, transparent, #000 45%);
+  transition: transform .8s var(--ease);
+}
+.svc__item--new:hover .svc__visual { transform: scale(1.04); }
+.svc__item--new .svc__go { background: var(--paper); }
+@media (max-width: 720px) {
+  .svc__visual { width: 100%; opacity: .18; -webkit-mask-image: none; mask-image: none; }
+}
+

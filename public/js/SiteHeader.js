@@ -99,6 +99,10 @@ class SiteHeader extends HTMLElement {
                   <img class="nav__thumb" src="${root}assets/img/Proyecto_Woolworth/13.webp" alt="" loading="lazy" />
                   Ingenierías Iniciales
                 </a>
+                <a href="${pages}termografia-drones.html" class="nav__dropdown-item" role="menuitem">
+                  <img class="nav__thumb is-thermal" src="${root}assets/img/Proyecto_Talayote/3.webp" alt="" loading="lazy" />
+                  Termografía con Drones
+                </a>
                 <a href="${pages}servicios-adicionales.html" class="nav__dropdown-item" role="menuitem">
                   <img class="nav__thumb" src="${root}assets/img/Due_Diligence/2.webp" alt="" loading="lazy" />
                   Servicios Adicionales

@@ -17,6 +17,7 @@ const ST_SERVICES = [
   { slug: 'ingenierias-iniciales',      tag: 'Ingeniería',  title: 'Ingenierías Iniciales',     img: 'Proyecto_Woolworth/13.webp' },
   { slug: 'supervision-ingenieria',     tag: 'Supervisión', title: 'Supervisión de Obra',       img: 'Proyecto_Woolworth/7.webp' },
   { slug: 'mantenimientos-correctivos', tag: 'Servicio',    title: 'Mantenimiento y Pruebas',   img: 'Mantenimientos_correctivos/4.webp' },
+  { slug: 'termografia-drones',         tag: 'Nuevo',       title: 'Termografía con Drones',    img: 'Proyecto_Talayote/3.webp', thermal: true },
   { slug: 'servicios-adicionales',      tag: 'Valor agregado', title: 'Servicios Adicionales',  img: 'Due_Diligence/2.webp' },
 ];
 
@@ -44,7 +45,7 @@ class SiteRelated extends HTMLElement {
           <div class="related">
             ${picks.map(s => `
               <a href="${pages}${s.slug}.html" class="rcard">
-                <img src="${root}assets/img/${s.img}" alt="" loading="lazy" />
+                <img src="${root}assets/img/${s.img}" alt="" loading="lazy"${s.thermal ? ' class="is-thermal"' : ''} />
                 <span>${s.tag}</span>
                 <strong>${s.title} →</strong>
               </a>`).join('')}
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealEls = document.querySelectorAll([
       '.h-head', '.pcard', '.svc__item', '.step', '.istep', '.icard', '.cred',
       '.wcard', '.rcard', '.h-cta__inner', '.h-contact__info', '.h-contact__side',
-      '.proj__head', '.p-split > *', '.ftable-wrap', '.p-gallery', '.prose',
+      '.proj__head', '.p-split > *', '.ftable-wrap', '.p-gallery', '.prose', '.srow', '.detect li',
     ].join(','));
 
     const io = new IntersectionObserver((entries) => {
@@ -135,4 +136,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-45% 0px -50% 0px' });
     targets.forEach(t => spy.observe(t));
   }
+});
+
+
+/* ============================================================
+   5. COMPARADOR VISUAL / TÉRMICO
+   ============================================================ */
+document.querySelectorAll('.tcompare').forEach((box) => {
+  const range = box.querySelector('.tcompare__range');
+  if (!range) return;
+  const update = () => box.style.setProperty('--pos', `${range.value}%`);
+  range.addEventListener('input', update);
+  update();
 });

@@ -45,6 +45,7 @@ class SiteFooter extends HTMLElement {
             <a href="${pages}ingenierias-iniciales.html">Ingenierías iniciales</a>
             <a href="${pages}supervision-ingenieria.html">Supervisión de obra</a>
             <a href="${pages}mantenimientos-correctivos.html">Mantenimiento</a>
+            <a href="${pages}termografia-drones.html">Termografía con drones</a>
             <a href="${pages}servicios-adicionales.html">Servicios adicionales</a>
           </nav>
 

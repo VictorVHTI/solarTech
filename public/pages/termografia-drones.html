@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspección Termográfica con Drones — Solar Tech</title>
+    <meta name="description" content="Inspección termográfica aérea de sistemas fotovoltaicos con drones equipados con cámaras térmicas y visuales: hotspots, fallas en celdas, diodos bypass y conexiones." />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=made-tommy@400,500,700,800&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+  </head>
+  <body class="site">
+
+    <!-- Filtro SVG: convierte una foto a paleta térmica "ironbow" (vista ilustrativa) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <filter id="thermal" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="0.3 0.59 0.11 0 0  0.3 0.59 0.11 0 0  0.3 0.59 0.11 0 0  0 0 0 1 0" />
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0 0.23 0.69 0.95 1 1" />
+          <feFuncG type="table" tableValues="0 0.04 0.07 0.33 0.76 0.98" />
+          <feFuncB type="table" tableValues="0 0.55 0.48 0.11 0.1 0.88" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
+
+    <site-header variant="overlay"></site-header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="p-hero">
+      <img class="p-hero__img" src="../assets/img/Proyecto_Talayote/3.webp" alt="" style="filter: url(#thermal) contrast(1.1)" />
+      <div class="p-hero__inner">
+        <nav class="crumbs" aria-label="Ruta de navegación">
+          <a href="../index.html">Inicio</a><span aria-hidden="true">/</span>
+          <a href="../index.html#soluciones">Soluciones</a><span aria-hidden="true">/</span>
+          <span>Termografía con drones</span>
+        </nav>
+        <span class="h-eyebrow h-eyebrow--light">Nuevo servicio</span>
+        <h1 class="p-hero__title">Inspección termográfica <em>con drones</em></h1>
+        <p class="p-hero__desc">Tecnología aérea para detectar fallas, optimizar el rendimiento y proteger tu inversión solar.</p>
+        <ul class="p-hero__facts">
+          <li>Cámaras térmicas y visuales</li>
+          <li>Sin contacto físico</li>
+          <li>Grandes superficies</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== INTRO + COMPARADOR ===================== -->
+    <section class="h-section h-section--paper">
+      <div class="h-wrap p-split">
+        <div>
+          <div class="h-head">
+            <span class="h-eyebrow">Inspección aérea</span>
+            <h2 class="h-title">Lo que el ojo no ve, la cámara térmica sí</h2>
+          </div>
+          <p class="h-lead">En SolarTech Solutions ofrecemos inspección termográfica aérea mediante drones equipados con cámaras térmicas y visuales, para evaluar las condiciones operativas de los módulos fotovoltaicos de manera precisa, eficiente y sin contacto físico.</p>
+          <p class="h-lead">Mediante el análisis de imágenes térmicas identificamos anomalías de temperatura que pueden afectar la generación y la integridad de tu central.</p>
+        </div>
+        <div>
+          <div class="tcompare">
+            <img class="tcompare__img" src="../assets/img/Proyecto_Woolworth/18.webp" alt="Vista aérea de un arreglo fotovoltaico sobre cubierta" />
+            <div class="tcompare__thermal" aria-hidden="true">
+              <img class="tcompare__img" src="../assets/img/Proyecto_Woolworth/18.webp" alt="" />
+              <span class="hotspot" style="left: 68%; top: 34%"><span>Hotspot</span></span>
+              <span class="hotspot" style="left: 82%; top: 70%"><span>Conexión</span></span>
+            </div>
+            <span class="tcompare__tag tcompare__tag--l">Visual</span>
+            <span class="tcompare__tag tcompare__tag--r">Térmica</span>
+            <span class="tcompare__scale">Frío <i></i> Caliente</span>
+            <input class="tcompare__range" type="range" min="0" max="100" value="55" aria-label="Comparar vista visual y térmica" />
+            <span class="tcompare__divider" aria-hidden="true"></span>
+          </div>
+          <p class="tcompare__note">Desliza para comparar. Vista térmica ilustrativa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUÉ DETECTAMOS ===================== -->
+    <section class="h-section h-section--cream">
+      <div class="h-wrap">
+        <div class="h-head h-head--split">
+          <div>
+            <span class="h-eyebrow">Qué detectamos</span>
+            <h2 class="h-title">Anomalías térmicas que identificamos</h2>
+          </div>
+          <p class="h-lead">Diferencias de temperatura que pueden estar relacionadas con fallas eléctricas u operativas.</p>
+        </div>
+        <ul class="detect">
+          <li><strong>Puntos calientes (hotspots)</strong><span>Sobrecalentamientos localizados que pueden afectar el rendimiento y la integridad de los módulos.</span></li>
+          <li><strong>Posibles fallas en celdas fotovoltaicas</strong><span>Identificación de patrones térmicos anormales.</span></li>
+          <li><strong>Indicios de fallas en diodos bypass</strong><span>Detección de comportamientos térmicos que requieren evaluación técnica.</span></li>
+          <li><strong>Anomalías en módulos y conexiones</strong><span>Diferencias térmicas que podrían indicar problemas eléctricos u operativos.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== QUÉ INCLUYE ===================== -->
+    <section class="h-section h-process">
+      <div class="h-wrap">
+        <div class="h-head h-head--light">
+          <span class="h-eyebrow h-eyebrow--light">¿Qué incluye nuestro servicio?</span>
+          <h2 class="h-title">Del vuelo al reporte técnico</h2>
+          <p class="h-lead">Diagnóstico técnico y mantenimiento predictivo: evaluamos grandes superficies, identificamos posibles fallas y priorizamos acciones para reducir riesgos operativos y pérdidas de generación.</p>
+        </div>
+        <ol class="isteps isteps--4">
+          <li class="istep">
+            <img src="../assets/img/Proyecto_Talayote/1.webp" alt="Vista aérea de una planta solar industrial" loading="lazy" />
+            <div class="istep__body">
+              <span class="istep__n">1</span>
+              <h3>Inspección aérea</h3>
+              <p>Vuelo con cámaras térmicas y visuales sobre el campo fotovoltaico.</p>
+            </div>
+          </li>
+          <li class="istep">
+            <img src="../assets/img/Proyecto_Woolworth/17.webp" alt="" loading="lazy" style="filter: url(#thermal) contrast(1.1)" />
+            <div class="istep__body">
+              <span class="istep__n">2</span>
+              <h3>Análisis termográfico</h3>
+              <p>Análisis especializado de las imágenes termográficas obtenidas.</p>
+            </div>
+          </li>
+          <li class="istep">
+            <img src="../assets/img/Proyecto_Seguros_Alamo/88.webp" alt="Módulos fotovoltaicos en revisión" loading="lazy" />
+            <div class="istep__body">
+              <span class="istep__n">3</span>
+              <h3>Clasificación de anomalías</h3>
+              <p>Identificación y clasificación de cada anomalía térmica encontrada.</p>
+            </div>
+          </li>
+          <li class="istep">
+            <img src="../assets/img/Mantenimientos_correctivos/8.webp" alt="Técnico registrando hallazgos en campo" loading="lazy" />
+            <div class="istep__body">
+              <span class="istep__n">4</span>
+              <h3>Reporte técnico</h3>
+              <p>Evidencia fotográfica, hallazgos y recomendaciones de mantenimiento.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="h-cta">
+      <img class="h-cta__img" src="../assets/img/Proyecto_Talayote/12.webp" alt="" loading="lazy" />
+      <div class="h-wrap h-cta__inner">
+        <div>
+          <h2 class="h-cta__title">Solicita una inspección termográfica de tu central solar</h2>
+          <p class="h-cta__desc">Conoce el estado de tu instalación fotovoltaica y toma decisiones de mantenimiento respaldadas por evidencia técnica.</p>
+        </div>
+        <div class="h-actions">
+          <a href="https://wa.me/524431044109?text=Hola%2C%20me%20interesa%20una%20inspecci%C3%B3n%20termogr%C3%A1fica%20con%20dron%20para%20mi%20central%20solar" target="_blank" rel="noopener noreferrer" class="h-btn h-btn--sun">Solicitar inspección</a>
+        </div>
+      </div>
+    </section>
+
+    <site-related current="termografia-drones"></site-related>
+    <site-footer></site-footer>
+
+    <script src="../js/SiteHeader.js"></script>
+    <script src="../js/SiteFooter.js"></script>
+    <script src="../js/site.js"></script>
+  </body>
+</html>

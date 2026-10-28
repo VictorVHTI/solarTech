@@ -24,13 +24,12 @@
     <!-- ===================== HERO (VIDEO) ===================== -->
     <section class="h-hero" id="inicio">
       <!--
-        VIDEO PLACEHOLDER (Mixkit, licencia libre).
-        Reemplazar por el video del cliente: assets/video/hero.mp4 (+ hero.webm opcional)
-        y actualizar el poster con un frame del mismo video.
+        Video del hero: assets/video/hero.mp4 (Mixkit, licencia libre).
+        Para cambiarlo, reemplazar ese archivo y su poster (hero-poster.jpg).
       -->
       <video class="h-hero__video" id="hero-video" autoplay muted loop playsinline preload="metadata"
-             poster="assets/img/Proyecto_Talayote/1.webp" aria-hidden="true">
-        <source src="https://assets.mixkit.co/videos/23491/23491-720.mp4" type="video/mp4" />
+             poster="assets/video/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/video/hero.mp4" type="video/mp4" />
       </video>
       <div class="h-hero__shade" aria-hidden="true"></div>
 
@@ -298,6 +297,15 @@
             <div>
               <h3 class="svc__title">Servicios Adicionales</h3>
               <p class="svc__desc">Servicios especializados de valor agregado.</p>
+            </div>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/termografia-drones.html" class="svc__item svc__item--new">
+            <img class="svc__visual is-thermal" src="assets/img/Proyecto_Talayote/3.webp" alt="" loading="lazy" />
+            <span class="svc__num">07</span>
+            <div>
+              <h3 class="svc__title">Termografía con Drones <span class="svc__badge">Nuevo</span></h3>
+              <p class="svc__desc">Inspección aérea con cámaras térmicas y visuales para detectar hotspots, fallas en celdas, diodos bypass y conexiones.</p>
             </div>
             <span class="svc__go" aria-hidden="true">→</span>
           </a>

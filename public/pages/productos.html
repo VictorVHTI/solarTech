@@ -4,244 +4,220 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos y Servicios — Solar Tech</title>
+    <meta name="description" content="Ingeniería fotovoltaica, project management, procura y construcción, commissioning, operación y mantenimiento y estudios eléctricos." />
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=made-tommy@400,500,700,800&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/site.css" />
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
   </head>
-  <body>
+  <body class="site">
 
-    <!-- ===================== HEADER ===================== -->
-    <site-header></site-header>
+    <site-header variant="overlay"></site-header>
 
     <!-- ===================== HERO ===================== -->
-    <section class="np-hero">
-      <div class="np-hero__overlay" aria-hidden="true"></div>
-      <div class="np-hero__content">
-        <span class="section__tag">Lo que ofrecemos</span>
-        <h1 class="np-hero__title">Productos y Servicios</h1>
-        <p class="np-hero__desc">Soluciones fotovoltaicas integrales para cada etapa de tu proyecto: desde la ingeniería inicial hasta la operación y mantenimiento continuo.</p>
+    <section class="p-hero">
+      <img class="p-hero__img" src="../assets/img/Proyecto_Woolworth/5.webp" alt="" />
+      <div class="p-hero__inner">
+        <nav class="crumbs" aria-label="Ruta de navegación">
+          <a href="../index.html">Inicio</a><span aria-hidden="true">/</span>
+          <a href="../index.html#soluciones">Soluciones</a><span aria-hidden="true">/</span>
+          <span>Productos y Servicios</span>
+        </nav>
+        <span class="h-eyebrow h-eyebrow--light">Lo que ofrecemos</span>
+        <h1 class="p-hero__title">Productos y <em>Servicios</em></h1>
+        <p class="p-hero__desc">Soluciones fotovoltaicas integrales para cada etapa de tu proyecto: desde la ingeniería inicial hasta la operación y mantenimiento continuo.</p>
+        <ul class="p-hero__facts">
+          <li>Ingeniería</li>
+          <li>Construcción</li>
+          <li>Commissioning</li>
+          <li>Operación y mantenimiento</li>
+          <li>Termografía con drones</li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===================== TARJETAS DE PRODUCTOS ===================== -->
-    <section class="section productos-page" id="productos">
-      <div class="section__inner">
-        <div class="section__header">
-          <span class="section__tag">Portafolio completo</span>
-          <h2 class="section__title">Nuestros Productos y Servicios</h2>
-          <p class="section__subtitle">
-            Tecnología de vanguardia y respaldo garantizado en cada solución que entregamos.
-          </p>
-        </div>
-
-        <div class="cards">
-
-          <!-- Tarjeta 1: Ingeniería fotovoltaica -->
-          <article class="card reveal">
-            <div class="card__icon card__icon--green" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="4" y="14" width="56" height="32" rx="3"/>
-                <line x1="4"  y1="24" x2="60" y2="24"/>
-                <line x1="4"  y1="34" x2="60" y2="34"/>
-                <line x1="19" y1="14" x2="19" y2="46"/>
-                <line x1="34" y1="14" x2="34" y2="46"/>
-                <line x1="49" y1="14" x2="49" y2="46"/>
-                <line x1="26" y1="46" x2="38" y2="46"/>
-                <line x1="32" y1="46" x2="32" y2="54"/>
-                <polyline points="10,8 32,2 54,8" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Ingeniería Fotovoltaica</h3>
-            <p class="card__desc">
-              Diseño y desarrollo de ingeniería para instalaciones fotovoltaicas de alto rendimiento.
-              Maximizamos la rentabilidad de los recursos para proyectos industriales.
-            </p>
-          </article>
-
-          <!-- Tarjeta 2: Project Management -->
-          <article class="card reveal">
-            <div class="card__icon card__icon--blue" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="8" y="8" width="48" height="48" rx="4"/>
-                <line x1="8"  y1="22" x2="56" y2="22"/>
-                <line x1="20" y1="8"  x2="20" y2="22"/>
-                <line x1="44" y1="8"  x2="44" y2="22"/>
-                <line x1="18" y1="34" x2="30" y2="34"/>
-                <line x1="18" y1="44" x2="36" y2="44"/>
-                <circle cx="44" cy="42" r="8"/>
-                <polyline points="40,42 43,45 49,39"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Project Management</h3>
-            <p class="card__desc">
-              Coordinamos con nuestro equipo de ingeniería y operaciones, administrando el tiempo
-              y presupuesto de los proyectos fotovoltaicos.
-            </p>
-          </article>
-
-          <!-- Tarjeta 3: Procura y construcción -->
-          <article class="card reveal">
-            <div class="card__icon card__icon--yellow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="32,4 58,18 58,46 32,60 6,46 6,18"/>
-                <line x1="32" y1="4"  x2="32" y2="60"/>
-                <line x1="6"  y1="18" x2="58" y2="18"/>
-                <line x1="6"  y1="46" x2="58" y2="46"/>
-                <line x1="6"  y1="32" x2="32" y2="32"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Procura y Construcción</h3>
-            <p class="card__desc">
-              Procura de equipos certificados y construcción de la central solar bajo las normas
-              mexicanas y aprobación previa de planos de ingeniería.
-            </p>
-          </article>
-
-          <!-- Tarjeta 4: Commissioning -->
-          <article class="card reveal">
-            <div class="card__icon card__icon--green" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="32" cy="32" r="22"/>
-                <polyline points="22,32 29,39 44,24"/>
-                <line x1="32" y1="4"  x2="32" y2="12"/>
-                <line x1="32" y1="52" x2="32" y2="60"/>
-                <line x1="4"  y1="32" x2="12" y2="32"/>
-                <line x1="52" y1="32" x2="60" y2="32"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Commissioning</h3>
-            <p class="card__desc">
-              Puesta en marcha, proceso esencial para el óptimo desempeño, seguridad y garantía
-              de la central solar; nuestro equipo garantiza el inicio de funcionamiento.
-            </p>
-          </article>
-
-          <!-- Tarjeta 5: Operación y mantenimiento -->
-          <article class="card reveal">
-            <div class="card__icon card__icon--blue" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M44 8a12 12 0 0 1 0 20L20 54a6 6 0 0 1-8-8L36 22A12 12 0 0 1 44 8z"/>
-                <line x1="30" y1="36" x2="38" y2="28"/>
-                <circle cx="44" cy="14" r="3" fill="currentColor" stroke="none"/>
-                <path d="M10 10 a28 28 0 0 1 28 -4" stroke-dasharray="4 3"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Operación y Mantenimiento</h3>
-            <p class="card__desc">
-              Operación y mantenimiento eficiente de la central solar para lograr una óptima
-              producción del sistema y maximizar su vida útil.
-            </p>
-          </article>
-
-          <!-- Tarjeta 6: Estudios eléctricos -->
-          <article class="card reveal">
-            <div class="card__icon card__icon--yellow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="10" y="8" width="44" height="48" rx="3"/>
-                <line x1="20" y1="22" x2="44" y2="22"/>
-                <line x1="20" y1="32" x2="44" y2="32"/>
-                <line x1="20" y1="42" x2="34" y2="42"/>
-                <polyline points="38,38 44,44 38,50" fill="none"/>
-                <polyline points="50,44 44,44"/>
-                <circle cx="32" cy="14" r="3" fill="currentColor" stroke="none"/>
-              </svg>
-            </div>
-            <h3 class="card__title">Estudios Eléctricos</h3>
-            <p class="card__desc">
-              Elaboración de estudios eléctricos especializados bajo las normas mexicanas,
-              con aprobación previa de planos de ingeniería para cada proyecto.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CTA CONTACTO ===================== -->
-    <section class="section productos-page__cta">
-      <div class="section__inner productos-page__cta-inner reveal">
-        <div class="productos-page__cta-text">
-          <span class="section__tag">¿Listo para empezar?</span>
-          <h2 class="section__title">Solicita tu cotización sin costo</h2>
-          <p class="productos-page__cta-desc">
-            Nuestro equipo de ingeniería analiza tu caso y te presenta una propuesta técnica y económica
-            adaptada a tus necesidades en menos de 24 horas.
-          </p>
-        </div>
-        <div class="productos-page__cta-actions">
-          <a href="https://wa.me/4431044109?text=Hola%20quiero%20una%20cotizaci%C3%B3n%20de%20Solar%20Tech"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn--whatsapp no-border">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-            </svg>
-            <span>Cotizar por WhatsApp</span>
-          </a>
-          <a href="../index.html#contacto" class="btn btn--outline">Ver formulario de contacto</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-      <div class="footer__inner">
-
-        <div class="footer__left">
-          <nav class="footer__nav" aria-label="Navegación footer">
-            <a href="../index.html#inicio"    class="footer__link">Inicio</a>
-            <a href="productos.html"          class="footer__link">Productos</a>
-            <a href="../index.html#ubicacion" class="footer__link">Ubicación</a>
-            <a href="../index.html#contacto"  class="footer__link">Contacto</a>
-          </nav>
-          <div class="footer__legal">
-            <a href="../about.html" class="footer__link footer__link--legal">Quiénes somos</a>
-            <a href="../terms.html" class="footer__link footer__link--legal">Términos y condiciones</a>
+    <!-- ===================== SERVICIOS (desglose) ===================== -->
+    <section class="h-section h-section--cream">
+      <div class="h-wrap">
+        <div class="h-head h-head--split">
+          <div>
+            <span class="h-eyebrow">Portafolio completo</span>
+            <h2 class="h-title">Soluciones de principio a fin</h2>
           </div>
+          <p class="h-lead">Desarrollamos proyectos llave en mano sobre techo, suelo y carport, con esquemas de inversión de contado y PPA (venta de energía sin inversión inicial). Esto incluye cada servicio:</p>
         </div>
 
-        <div class="footer__brand">
-          <img
-            src="../assets/img/logo.png"
-            alt="Solar Tech Logo"
-            class="footer__logo-img"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
-          />
-          <p class="footer__logo-fallback">☀️ Solar Tech</p>
-          <p class="footer__tagline">Energía limpia para el futuro.</p>
-        </div>
-
-        <div class="footer__right">
-          <p class="footer__social-label">Síguenos</p>
-          <div class="footer__social">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-              </svg>
-            </a>
+        <nav class="pnav pnav--inline" aria-label="Servicios">
+          <div class="pnav__list">
+            <a href="#ingenieria">Ingeniería Fotovoltaica</a>
+            <a href="#project-management">Project Management</a>
+            <a href="#procura-construccion">Procura y Construcción</a>
+            <a href="#commissioning">Commissioning</a>
+            <a href="#operacion-mantenimiento">Operación y Mantenimiento</a>
+            <a href="#estudios-electricos">Estudios Eléctricos</a>
+            <a href="#termografia-drones">Inspección Termográfica con Drones</a>
           </div>
-          <p class="footer__copy">&copy; 2026 Solar Tech. Todos los derechos reservados.</p>
-          <p class="footer__legal-name">
-            ENERTIUM SOLARTECH SOLUTIONS S.A. DE C.V.<br/>
-            <span class="footer__impi">® Marca registrada ante el IMPI</span>
-          </p>
-        </div>
+        </nav>
 
+        <div class="srows">
+          <article class="srow" id="ingenieria">
+            <div class="srow__media">
+              <img src="../assets/img/Proyecto_Talayote/1.webp" alt="Vista aérea de una planta industrial con paneles solares" loading="lazy" />
+              <span class="icard__num">01</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Ingeniería Fotovoltaica</h3>
+              <p class="srow__desc">Diseño y desarrollo de ingeniería para instalaciones fotovoltaicas de alto rendimiento. Maximizamos la rentabilidad de los recursos para proyectos industriales.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li>Diseño e ingeniería de sistemas fotovoltaicos, conceptual y de detalle.</li>
+                <li>Memorias de cálculo y criterios de diseño.</li>
+                <li>Planos de sembrado y seriado de módulos.</li>
+                <li>Diagramas unifilares.</li>
+                <li>Cuadros de generación y formatos técnicos de desempeño y capacidad.</li>
+                <li>Planos de comunicación e integración de monitoreo.</li>
+              </ul>
+              <a href="ingenierias-iniciales.html" class="h-link srow__more">Ver ingenierías iniciales →</a>
+            </div>
+          </article>
+          <article class="srow" id="project-management">
+            <div class="srow__media">
+              <img src="../assets/img/Proyecto_Woolworth/8.webp" alt="Grúa descargando material para una obra solar" loading="lazy" />
+              <span class="icard__num">02</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Project Management</h3>
+              <p class="srow__desc">Coordinamos con nuestro equipo de ingeniería y operaciones, administrando el tiempo y presupuesto de los proyectos fotovoltaicos.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li>Levantamiento de información en sitio y evaluación técnico-económica (viabilidad, ahorro y retorno).</li>
+                <li>Coordinación entre ingeniería, procura y operaciones.</li>
+                <li>Administración del tiempo y presupuesto del proyecto.</li>
+                <li>Integración documental y trámites de interconexión con CFE: UVIE/UIIE y medidor bidireccional, según alcance.</li>
+              </ul>
+              <a href="nuestros-proyectos.html" class="h-link srow__more">Ver metodología EPC →</a>
+            </div>
+          </article>
+          <article class="srow" id="procura-construccion">
+            <div class="srow__media">
+              <img src="../assets/img/Proyecto_Talayote/5.webp" alt="Izaje de módulos fotovoltaicos con grúa" loading="lazy" />
+              <span class="icard__num">03</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Procura y Construcción</h3>
+              <p class="srow__desc">Procura de equipos certificados y construcción de la central solar bajo las normas mexicanas y aprobación previa de planos de ingeniería.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li>Módulos de última generación con estándares <strong>Tier 1, IEC 61215 y UL 61730</strong>.</li>
+                <li>Inversores certificados <strong>UL 1741 / UL 1699B</strong>.</li>
+                <li>Estructura de montaje conforme al tipo de cubierta y condiciones del sitio.</li>
+                <li>Centrales sobre techo, suelo y carport fotovoltaico.</li>
+                <li>Canalización y conexionado DC/AC con protecciones y puesta a tierra.</li>
+              </ul>
+              <a href="nuestros-proyectos.html" class="h-link srow__more">Ver alcance EPC →</a>
+            </div>
+          </article>
+          <article class="srow" id="commissioning">
+            <div class="srow__media">
+              <img src="../assets/img/Proyecto_Universidad_Marista/12.webp" alt="Pantalla de inversor mostrando el sistema generando energía" loading="lazy" />
+              <span class="icard__num">04</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Commissioning</h3>
+              <p class="srow__desc">Puesta en marcha, proceso esencial para el óptimo desempeño, seguridad y garantía de la central solar; nuestro equipo de operaciones garantiza el inicio de funcionamiento.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li>Mediciones eléctricas.</li>
+                <li>Pruebas de aislamiento y resistencia.</li>
+                <li>Verificación de protecciones.</li>
+                <li>Termografía de aseguramiento de calidad.</li>
+                <li>Pruebas operativas para la puesta en servicio.</li>
+                <li>Arranque del sistema de monitoreo en tiempo real.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="srow" id="operacion-mantenimiento">
+            <div class="srow__media">
+              <img src="../assets/img/Due_Diligence/3.webp" alt="Técnicos limpiando módulos fotovoltaicos" loading="lazy" />
+              <span class="icard__num">05</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Operación y Mantenimiento</h3>
+              <p class="srow__desc">Operación y mantenimiento eficiente de la central solar para lograr una óptima producción del sistema y maximizar su vida útil.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li>Póliza O&amp;M anual con <strong>2 visitas preventivas al año</strong> a paneles, inversores, estructura y cableado.</li>
+                <li>Acceso al monitoreo remoto en tiempo real <strong>24/7, los 365 días</strong>, con usuario y contraseña.</li>
+                <li>Energía generada diaria, mensual y acumulada, curva de potencia por hora, históricos y CO₂ evitado.</li>
+                <li>Mantenimiento correctivo y pruebas de resistencia de aislamiento (IR).</li>
+              </ul>
+              <a href="servicios-adicionales.html" class="h-link srow__more">Ver póliza O&amp;M →</a>
+            </div>
+          </article>
+          <article class="srow" id="estudios-electricos">
+            <div class="srow__media">
+              <img src="../assets/img/Proyecto_Seguros_Alamo/84.webp" alt="Tablero eléctrico con protecciones y cableado" loading="lazy" />
+              <span class="icard__num">06</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Estudios Eléctricos</h3>
+              <p class="srow__desc">Servicios especializados de diagnóstico, verificación y estudios eléctricos para optimizar el desempeño, reducir riesgos operativos y asegurar el cumplimiento técnico.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li><strong>Due diligence</strong>: revisión técnica integral de la condición del activo, cumplimiento y riesgos.</li>
+                <li><strong>Auditorías técnicas</strong> de instalación, configuración, desempeño y conformidad.</li>
+                <li><strong>Calidad de la energía</strong>: variaciones de voltaje, armónicos, factor de potencia.</li>
+                <li><strong>Termografía</strong> de módulos, conexiones y tableros.</li>
+                <li><strong>Corto circuito y coordinación de protecciones</strong>.</li>
+              </ul>
+              <a href="servicios-adicionales.html" class="h-link srow__more">Ver servicios adicionales →</a>
+            </div>
+          </article>
+          <article class="srow srow--new" id="termografia-drones">
+            <div class="srow__media">
+              <img src="../assets/img/Proyecto_Talayote/3.webp" alt="Vista aérea de una planta solar en paleta térmica" loading="lazy" class="is-thermal" />
+              <span class="icard__num">07</span>
+            </div>
+            <div class="srow__body">
+              <h3 class="srow__title">Inspección Termográfica con Drones <span class="svc__badge">Nuevo</span></h3>
+              <p class="srow__desc">Inspección aérea con drones equipados con cámaras térmicas y visuales para evaluar los módulos de forma precisa, eficiente y sin contacto físico.</p>
+              <span class="srow__label">Qué incluye</span>
+              <ul class="includes">
+                <li>Inspección aérea con cámaras térmicas y visuales.</li>
+                <li>Análisis especializado de imágenes termográficas.</li>
+                <li>Identificación y clasificación de anomalías térmicas: hotspots, celdas, diodos bypass y conexiones.</li>
+                <li>Reporte técnico con evidencia fotográfica, hallazgos y recomendaciones de mantenimiento.</li>
+              </ul>
+              <a href="termografia-drones.html" class="h-link srow__more">Conocer el servicio →</a>
+            </div>
+          </article>
+        </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="h-cta">
+      <img class="h-cta__img" src="../assets/img/Proyecto_Talayote/4.webp" alt="" loading="lazy" />
+      <div class="h-wrap h-cta__inner">
+        <div>
+          <h2 class="h-cta__title">Solicita tu cotización sin costo</h2>
+          <p class="h-cta__desc">Nuestro equipo de ingeniería analiza tu caso y te presenta una propuesta técnica y económica adaptada a tus necesidades en menos de 24 horas.</p>
+        </div>
+        <div class="h-actions">
+          <a href="https://wa.me/524431044109?text=Hola%20quiero%20una%20cotizaci%C3%B3n%20de%20Solar%20Tech" target="_blank" rel="noopener noreferrer" class="h-btn h-btn--sun">Cotizar por WhatsApp</a>
+          <a href="../index.html#cotizar" class="h-btn h-btn--ghost">Cotización rápida</a>
+        </div>
+      </div>
+    </section>
+
+    <site-related current="productos"></site-related>
+    <site-footer></site-footer>
 
     <script src="../js/SiteHeader.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/SiteFooter.js"></script>
+    <script src="../js/site.js"></script>
   </body>
 </html>

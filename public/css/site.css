@@ -1211,3 +1211,79 @@
 /* Índice de servicios dentro de la página (no fijo) */
 .pnav--inline { position: static; background: none; backdrop-filter: none; border: 0; margin-bottom: 1.5rem; }
 .pnav--inline .pnav__list { flex-wrap: wrap; overflow: visible; }
+
+/* ============================================================
+   MAQUETA DE REPORTE TÉCNICO (termografía con drones)
+   Ilustra el entregable; no es un reporte real.
+   ============================================================ */
+.reportmock {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(255, 182, 0, .25), transparent 55%),
+    linear-gradient(160deg, #1b3350, #0d1f33);
+  display: grid;
+  place-items: center;
+}
+.reportmock__sheet {
+  width: 78%;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 8% 7% 6%;
+  transform: rotate(-4deg) translateY(6%);
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, .6), 14px -10px 0 -4px rgba(255, 255, 255, .55);
+  font-family: var(--font-body);
+}
+.reportmock__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--sun);
+}
+.reportmock__head strong { font-family: var(--font-display); font-size: .62rem; letter-spacing: .02em; }
+.reportmock__head span { font-size: .45rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--sky); }
+.reportmock__title { margin-top: .45rem; font-family: var(--font-display); font-size: .7rem; font-weight: 800; line-height: 1.15; }
+.reportmock__body { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; margin-top: .45rem; }
+.reportmock .reportmock__thermal {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 3px;
+  opacity: 1;
+}
+.reportmock__rows { display: grid; gap: .22rem; align-content: start; }
+.reportmock__rows li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .25rem;
+  font-size: .42rem;
+  font-weight: 600;
+  padding: .18rem .25rem;
+  background: #f4f6f8;
+  border-radius: 2px;
+}
+.reportmock__rows b { font-size: .38rem; padding: .08rem .25rem; border-radius: 999px; color: #fff; }
+.sev-h { background: #d43a1a; }
+.sev-m { background: #f29a1b; }
+.sev-l { background: #3C7735; }
+.reportmock__lines { margin-top: .5rem; display: grid; gap: .2rem; }
+.reportmock__lines i { display: block; height: 3px; border-radius: 2px; background: #e3e7ec; }
+.reportmock__lines i:nth-child(2) { width: 85%; }
+.reportmock__lines i:nth-child(3) { width: 60%; }
+.reportmock__tag {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  font: 700 .6rem/1 var(--font-body);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(10, 23, 38, .6);
+  padding: .35rem .6rem;
+  border-radius: 999px;
+}

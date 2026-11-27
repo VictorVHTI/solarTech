@@ -104,7 +104,7 @@ class SiteHeader extends HTMLElement {
                   Termografía con Drones
                 </a>
                 <a href="${pages}servicios-adicionales.html" class="nav__dropdown-item" role="menuitem">
-                  <img class="nav__thumb" src="${root}assets/img/Due_Diligence/2.webp" alt="" loading="lazy" />
+                  <img class="nav__thumb" src="${root}assets/img/inspeccion/1.webp" alt="" loading="lazy" />
                   Servicios Adicionales
                 </a>
               </div>

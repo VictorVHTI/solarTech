@@ -18,7 +18,7 @@ const ST_SERVICES = [
   { slug: 'supervision-ingenieria',     tag: 'Supervisión', title: 'Supervisión de Obra',       img: 'Proyecto_Woolworth/7.webp' },
   { slug: 'mantenimientos-correctivos', tag: 'Servicio',    title: 'Mantenimiento y Pruebas',   img: 'Mantenimientos_correctivos/4.webp' },
   { slug: 'termografia-drones',         tag: 'Nuevo',       title: 'Termografía con Drones',    img: 'Proyecto_Talayote/3.webp', thermal: true },
-  { slug: 'servicios-adicionales',      tag: 'Valor agregado', title: 'Servicios Adicionales',  img: 'Due_Diligence/2.webp' },
+  { slug: 'servicios-adicionales',      tag: 'Valor agregado', title: 'Servicios Adicionales',  img: 'inspeccion/1.webp' },
 ];
 
 class SiteRelated extends HTMLElement {
